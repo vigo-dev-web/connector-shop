@@ -1,0 +1,47 @@
+@import './vars';
+
+.body {
+   font-family: $baseFont;
+   color: $textColor;
+   font-weight: 400;
+   font-size: toRem(16);
+   line-height: toRem(24);
+}
+
+.app__wrapper {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+
+h2 {
+   font-size: $secondTitleSize;
+   font-weight: 700;
+   line-height: toRem(44);
+   color: $blackColor;
+}
+
+h3 {
+   font-size: $thirdTitleSize;
+   font-weight: 700;
+   line-height: toRem(32);
+   color: $blackColor;
+}
+
+h4 {
+   font-size: $fourthTitleSize;
+   font-weight: 700;
+   line-height: toRem(24);
+   color: $blackColor;
+}
+
+a {
+   transition: $mainTransition;
+}
