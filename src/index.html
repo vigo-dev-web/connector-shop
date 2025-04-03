@@ -12,11 +12,560 @@
 <body class="body">
    <div class="app__wrapper">
       @@include('html/_header.htm')
-      @@include('html/_mobileMenu.htm')
+      @@include('html/_headerMobile.htm')
       <main>
-         <div class="container">
-            <!-- @@include('html/_mainSlider.htm') -->
-         </div>
+         <section class="banner">
+
+            <div class="banner__container container">
+               <div class="banner__wrapper">
+                  <div class="swiper banner-slider">
+                     <div class="swiper-wrapper banner-slide-wrapper">
+                        <div class="swiper-slide banner-slide">
+                           <div class="banner-slide__title-container">
+                              <h1>КАЧЕСТВО И ГАРАНТИЯ</h1>
+                              <p>по доступной цене</p>
+                           </div>
+                           <img src="./img/products/photo-gallery-1.png" alt="галерея">
+                        </div>
+                        <div class="swiper-slide banner-slide">
+                           <div class="banner-slide__title-container">
+                              <h1>ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ</h1>
+                              <p>по доступной цене</p>
+                           </div>
+                           <img src="./img/products/photo-gallery-1.png" alt="галерея">
+                        </div>
+                        <div class="swiper-slide banner-slide">
+                           <div class="banner-slide__title-container">
+                              <h1>ШИРОКИЙ АССОРТИМЕНТ</h1>
+                              <p>по доступной цене</p>
+                           </div>
+                           <img src="./img/products/photo-gallery-1.png" alt="галерея">
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="banner__market-wrapper">
+                     <div class="banner__market-item">
+                        <div class="banner__item-wrapper">
+                           <div class="banner__item-content">
+                              <h5 class="banner__item-title">Заказать на OZON</h5>
+                              <p class="banner__item-text">Полный ассортимент товаров на популярном маркетплейсе</p>
+                           </div>
+                           <img src="./img/icons/ozon-logo.png" alt="озон" class="banner__item-img">
+                        </div>
+                        <img src="./img/icons/ozon-logo-2.png" alt="озон">
+                     </div>
+                     <div class="banner__market-item">
+                        <div class="banner__item-wrapper">
+                           <div class="banner__item-content">
+                              <h5 class="banner__item-title">Заказать на Яндекс Маркет</h5>
+                              <p class="banner__item-text">Полный ассортимент товаров на популярном маркетплейсе</p>
+                           </div>
+                           <img src="./img/icons/yandex-m-logo.png" alt="яндекс" class="banner__item-img">
+                        </div>
+                        <img src="./img/icons/yandex-m-logo-2.png" alt="яндекс" >
+                     </div>
+                     <div class="banner__market-item">
+                        <div class="banner__item-wrapper">
+                           <div class="banner__item-content">
+                              <h5 class="banner__item-title">ВсеИнструменты.ру</h5>
+                              <p class="banner__item-text">Полный ассортимент товаров на популярном маркетплейсе</p>
+                           </div>
+                           <img src="./img/icons/instrymenty-logo.png" alt="все инструменты"class="banner__item-img">
+                        </div>
+                        <img src="./img/icons/instrymenty-logo-2.png" alt="все инструменты" >
+                     </div>
+                  </div>
+               </div>
+
+               <!-- @@include('html/_mainSlider.htm') -->
+            </div>
+         </section>
+         <section class="benefits">
+            <div class="benefits__container container">
+               <div class="benefits__content">
+                  <h2 class="benefits__title">Почему выбирают нас</h2>
+                  <div class="benefits__wrapper">
+                     <div class="benefits__item">
+                        <div class="benefits__title-container">
+                           <img src="./img/icons/box-blue.svg" alt="Ассортимент">
+                           <h3 class="benefits__title">Ассортимент</h3>
+                        </div>
+                        <p class="benefits__text">
+                           Мы непрерывно увеличиваем количество товаров и наращиваем поставки
+                        </p>
+                     </div>
+                     <div class="benefits__item">
+                        <div class="benefits__title-container">
+                           <img src="./img/icons/conversation-blue.svg" alt="Консультации">
+                           <h3 class="benefits__title">Консультации</h3>
+                        </div>
+                        <p class="benefits__text">
+                           Помогаем в выборе продукции, аналогичной товарам из Европы</p>
+                     </div>
+                     <div class="benefits__item">
+                        <div class="benefits__title-container">
+                           <img src="./img/icons/greeting-blue.svg" alt="Доставка">
+                           <h3 class="benefits__title">Доставка по РФ</h3>
+                        </div>
+                        <p class="benefits__text">
+                           Деловые Линии, СДЭК, Boxberry,отправка в любой регион России</p>
+                     </div>
+                     <div class="benefits__item">
+                        <div class="benefits__title-container">
+                           <img src="./img/icons/features.svg" alt="Гарантия">
+                           <h3 class="benefits__title">Гарантия</h3>
+                        </div>
+                        <p class="benefits__text">
+                           Мы - официальные представителив России. Продукция проверенаи сертифицирована</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="popular">
+            <div class="popular__container container">
+               <div class="popular__wrapper">
+                  <h2 class="popular__title">
+                     Популярные товары
+                  </h2>
+                  <div class="popular__grid hide-subsequent-rows">
+                     <a href="#">
+                        <div class="popular__item-wrapper">
+                           <div>
+                              <img src="./img/products/photo-2.png" alt="товар">
+                           </div>
+                           <div>
+                              <h5>HSB-006-SE-BK-1L-M25</h5>
+                              <p>K000001854</p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="popular__item-wrapper">
+                           <div>
+                              <img src="./img/products/photo-1.png" alt="товар">
+                           </div>
+                           <div>
+                              <h5>HE-006-TE-CCT-1L-2PG16</h5>
+                              <p>K000000296</p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="popular__item-wrapper">
+                           <div>
+                              <img src="./img/products/photo-3.png" alt="товар">
+                           </div>
+                           <div>
+                              <h5>HA-003-SE-BK-1L-MCV-M20</h5>
+                              <p>K000000006</p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="popular__item-wrapper">
+                           <div>
+                              <img src="./img/products/photo-14.png" alt="товар">
+                           </div>
+                           <div>
+                              <h5>HK-008/0-SE-SF-2L-2PG21</h5>
+                              <p>K000003531</p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="popular__item-wrapper">
+                           <div>
+                              <img src="./img/products/photo-5.png" alt="товар">
+                           </div>
+                           <div>
+                              <h5> HA-003-F-BK-1L
+                              </h5>
+                              <p>PK00000007</p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="popular__item-wrapper">
+                           <div>
+                              <img src="./img/products/photo-6.png" alt="товар">
+                           </div>
+                           <div>
+                              <h5> HE-006-F-SF-1L-M20
+                              </h5>
+                              <p>PK00000181</p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="popular__item-wrapper">
+                           <div>
+                              <img src="./img/products/photo-7.png" alt="товар">
+                           </div>
+                           <div>
+                              <h5> HSB-006-F-BK-1L
+                              </h5>
+                              <p>PK00002441</p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="popular__item-wrapper">
+                           <div>
+                              <img src="./img/products/photo-8.png" alt="товар">
+                           </div>
+                           <div>
+                              <h5>HK-004/0-M-SE-2B-M25</h5>
+                              <p>PK00002890</p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="about">
+            <div class="about__container container">
+               <h2 class="about__title">О компании</h2>
+               <div class="about__wrapper">
+                  <div class="about__img-container">
+                     <img src="./img/content/process.jpg" alt="компанния">
+                  </div>
+                  <div class="about__content">
+                     <h4 class="about__offer-title">Мы предлагаем инновационные решения и профессиональный подход</h4>
+                     <div class="about__text">
+                        <p>Сотрудничаем с высокотехнологичными предприятиями и являемся их официальными представителями
+                           в России.
+                        </p>
+                        <p> Наша миссия — предоставить нашим клиентам инновационные и надёжные решения, соответствующие
+                           самым высоким мировым стандартам.
+                        </p>
+                     </div>
+                     <a href="#">Узнать больше</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="news">
+            <div class="news__container container">
+               <div class="news__title-container">
+                  <h2 class="news__title">Новости</h2>
+                  <button class="title-btn btn">Показать все</button>
+               </div>
+               <div class="news__body">
+                  <div class="swiper news-slider">
+                     <!-- Additional required wrapper -->
+                     <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide news__item">
+                           <div>
+                              <div>
+                                 <img src="./img/content/electro-2022.jpg" alt="новости">
+                              </div>
+                              <div>
+                                 <h5>Участие ООО «КевТек» в выставке ЭЛЕКТРО-2024</h5>
+                                 <p>Выставка состоится 6-9 июня 2024 года в Экспоцентрег. Москва</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper-slide news__item">
+                           <div>
+                              <div>
+                                 <img src="./img/content/electro-2023.jpg" alt="новости">
+                              </div>
+                              <div>
+                                 <h5>Haoke Electrical (ZJHK) на выставке ЭЛЕКТРО-2023</h5>
+                                 <p>Выставка состоится 6–9 июня 2023 года в Экспоцентре</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper-slide news__item">
+                           <div>
+                              <div>
+                                 <img src="./img/content/handshake.jpg" alt="новости">
+                              </div>
+                              <div>
+                                 <h5>Заключили новые контрактыс поставщиками</h5>
+                                 <p>Наш каталог пополнен новыми товарами</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper-slide news__item">
+                           <div>
+                              <div>
+                                 <img src="./img/content/electro-2022.jpg" alt="новости">
+                              </div>
+                              <div>
+                                 <h5>Участие ООО «КевТек» в выставке ЭЛЕКТРО-2024</h5>
+                                 <p>Выставка состоится 6-9 июня 2024 года в Экспоцентрег. Москва</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper-slide news__item">
+                           <div>
+                              <div>
+                                 <img src="./img/content/handshake.jpg" alt="новости">
+                              </div>
+                              <div>
+                                 <h5>Заключили новые контрактыс поставщиками</h5>
+                                 <p>Наш каталог пополнен новыми товарами</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- If we need navigation buttons -->
+                  </div>
+                  <div class="swiper-button-prev news"></div>
+                  <div class="swiper-button-next news"></div>
+               </div>
+            </div>
+         </section>
+         <section class="articles">
+            <div class="articles__container container">
+               <div class="articles__title-container">
+                  <h2 class="articles__title">Статьи</h2>
+                  <button class="title-btn btn">Показать все</button>
+               </div>
+               <div class="articles__body">
+                  <div class="swiper articles-slider">
+                     <!-- Additional required wrapper -->
+                     <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide articles__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/photo-9.png" alt="статьи">
+                              </div>
+                              <div>
+                                 <h5>О промышленных прямоугольных разъёмах</h5>
+                                 <p>Корпусы и кожухи прямоугольных промышленных разъёмов
+                                    3A, 10A, 16A, 32A</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper-slide articles__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/image-1.png" alt="статьи">
+                              </div>
+                              <div>
+                                 <h5>Типы клемм в контактных вставках</h5>
+                                 <p>Контактные вставки и способы присоединения проводников к контактам</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper-slide articles__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/image-2.png" alt="статьи">
+                              </div>
+                              <div>
+                                 <h5>Подбор элементов прямоугольного промышленного разъёма
+                                 </h5>
+                                 <p>Совместимость компонентов разъёма по типоразмеру</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper-slide articles__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/image-1.png" alt="статьи">
+                              </div>
+                              <div>
+                                 <h5>Типы клемм в контактных вставках</h5>
+                                 <p>Контактные вставки и способы присоединения проводников к контактам</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper articles__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/photo-10.png" alt="статьи">
+                              </div>
+                              <div>
+                                 <h5>Информация о сальниках (кабельных вводах)</h5>
+                                 <p>Основная информация о типах сальников и их назначении</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                        <div class="swiper-slide articles__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/image-2.png" alt="статьи">
+                              </div>
+                              <div>
+                                 <h5>Подбор элементов прямоугольного промышленного разъёма
+                                 </h5>
+                                 <p>Совместимость компонентов разъёма по типоразмеру</p>
+                              </div>
+                              <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+
+                     </div>
+                     <!-- If we need navigation buttons -->
+                  </div>
+                  <div class="swiper-button-prev articles"></div>
+                  <div class="swiper-button-next articles"></div>
+               </div>
+
+            </div>
+         </section>
+         <section class="documents">
+            <div class="documents__container container">
+               <div class="documents__title-container">
+                  <h2 class="documents__title">Документация</h2>
+                  <button class="title-btn btn">Показать все</button>
+               </div>
+               <div class="documents__body">
+                  <div class="swiper documents-slider">
+                     <!-- Additional required wrapper -->
+                     <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide documents__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/doc-1.jpg" alt="документация">
+                              </div>
+                              <div>
+                                 <h5>Промышленные прямоугольные разъемы “Тип A”</h5>
+                                 <p>Корпусы и кожухи прямоугольных промышленных разъёмов
+                                    3A, 10A, 16A, 32A</p>
+                              </div>
+                              <button>Скачать</button>
+                           </div>
+                        </div>
+                        <div class="swiper-slide documents__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/doc-2.jpg" alt="документация">
+                              </div>
+                              <div>
+                                 <h5>Серия НА</h5>
+                                 <p>Компактные контактные вставки промышленных разъемов 3A, 10A, 16A, 32A </p>
+                              </div>
+                              <button>Скачать</button>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide documents__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/doc-3.jpg" alt="документация">
+                              </div>
+                              <div>
+                                 <h5>Официальная документация серии НЕ на русском языке</h5>
+                                 <p>Корпусы и кожухи прямоугольных промышленных разъёмов
+                                    3A, 10A, 16A, 32A, 3A, 10A, 16A, 32A</p>
+                              </div>
+                              <button>Скачать</button>
+                           </div>
+                        </div>
+                        <div class="swiper-slide documents__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/doc-4.jpg" alt="документация">
+                              </div>
+                              <div>
+                                 <h5>Серия НЕЕ</h5>
+                                 <p>Корпусы и кожухи прямоугольных промышленных разъёмов
+                                    3A, 10A, 16A, 32A</p>
+                              </div>
+                              <button>Скачать</button>
+                           </div>
+                        </div>
+                        <div class="swiper-slide documents__item">
+                           <div>
+                              <div>
+                                 <img src="./img/products/doc-3.jpg" alt="документация">
+                              </div>
+                              <div>
+                                 <h5>Официальная документация серии НЕ на русском языке</h5>
+                                 <p>Корпусы и кожухи прямоугольных промышленных разъёмов
+                                    3A, 10A, 16A, 32A, 3A, 10A, 16A, 32A</p>
+                              </div>
+                              <button>Скачать</button>
+                           </div>
+                        </div>
+
+                     </div>
+                     <!-- If we need navigation buttons -->
+                  </div>
+                  <div class="swiper-button-prev documents"></div>
+                  <div class="swiper-button-next documents"></div>
+               </div>
+            </div>
+         </section>
+         <section class="brands">
+            <div class="brands__container container">
+               <div class="brands__title-container">
+                  <h2 class="brands__title">Бренды</h2>
+                  <button class="title-btn btn">Показать все</button>
+               </div>
+               <div class="brands__body">
+                  <div class="swiper brands-slider">
+                     <!-- Additional required wrapper -->
+                     <div class="swiper-wrapper brand">
+                        <!-- Slides -->
+                        <div class="swiper-slide brand">
+                           <a href="#" class="brands__slider-item">
+                              <img src="./img/icons/partner-logo.png" alt="брэнд">
+                           </a>
+                        </div>
+                        <div class="swiper-slide brand">
+                           <a href="#" class="brands__slider-item">
+                              <img src="./img/icons/logo.svg" alt="брэнд">
+                           </a>
+                        </div>
+                        <div class="swiper-slide brand">
+                           <a href="#" class="brands__slider-item">
+                              <img src="./img/icons/partner-logo.png" alt="брэнд">
+                           </a>
+                        </div>
+                        <div class="swiper-slide brand">
+                           <a href="#" class="brands__slider-item">
+                              <img src="./img/icons/partner-logo.png" alt="брэнд">
+                           </a>
+                        </div>
+                        <div class="swiper-slide brand">
+                           <a href="#" class="brands__slider-item">
+                              <img src="./img/icons/partner-logo.png" alt="брэнд">
+                           </a>
+                        </div>
+                        <div class="swiper-slide brand">
+                           <a href="#" class="brands__slider-item">
+                              <img src="./img/icons/logo.svg" alt="брэнд">
+                           </a>
+                        </div>
+                        <div class="swiper-slide brand">
+                           <a href="#" class="brands__slider-item">
+                              <img src="./img/icons/partner-logo.png" alt="брэнд">
+                           </a>
+                        </div>
+                        <div class="swiper-slide brand">
+                           <a href="#" class="brands__slider-item">
+                              <img src="./img/icons/partner-logo.png" alt="брэнд">
+                           </a>
+                        </div>
+                     </div>
+                     <!-- If we need navigation buttons -->
+                  </div>
+                  <div class="swiper-button-prev brands"></div>
+                  <div class="swiper-button-next brands"></div>
+               </div>
+            </div>
+         </section>
       </main>
       @@include('html/_footer.htm')
    </div>

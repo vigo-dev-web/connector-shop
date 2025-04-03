@@ -14,6 +14,7 @@ $greyColor300: rgba(242, 243, 247, 1);
 $greyColor400: rgba(213, 215, 218, 1);
 $greyColor500: rgba(164, 167, 174, 1);
 $greyColor600: rgba(113, 118, 128, 1);
+$blueLightColor: rgba(245, 251, 255, 1);
 $blueColor: rgba(0, 134, 201, 1);
 $blueHoverColor: rgba(0, 144, 211, 1);
 $blueDarkColor: rgba(6, 89, 134, 1);
@@ -25,8 +26,20 @@ $filter: brightness(0) saturate(100%) invert(33%) sepia(58%) saturate(1829%) hue
 
 // interactions
 
-$boxShadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+$boxShadow: 0 0 10px 0 rgba(6, 44, 65, 0.16);
 $mainTransition: all .3s ease-out;
+
+// functions
+
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem; 
+  @return $remValue;
+}
+
+@function toEm($value) {
+  $emValue: calc($value / 16) + em; 
+  @return $emValue;
+}
 
 // mockup width
 
@@ -35,11 +48,11 @@ $minWidth: toRem(360);
 
 // container width
 
-$container: 1250;
+$container: 1260;
 
 $secondContainer: toRem(996);
 
-$containerPadding: 10;
+$containerPadding: 20;
 
 $containerWidth: toRem($container + $containerPadding);
 
@@ -59,8 +72,9 @@ $secondFont: "Inter", sans-serif;
 
 // $mainTitleSize: toRem(40);
 $secondTitleSize: toRem(32);
-$thirdTitleSize: toRem(20);
-$fourthTitleSize: toRem(16);
+$thirdTitleSize: toRem(24);
+$fourthTitleSize: toRem(20);
+$fifthTitleSize: toRem(16);
 
 // mixins
 
@@ -89,8 +103,9 @@ $fourthTitleSize: toRem(16);
   font-weight: 700;
   line-height: toRem(24);
   border-radius: toRem(4);
-  padding: toRem(10);
-
+  padding: toRem(8) toRem(10);
+  overflow: hidden;
+  font-family: inherit;
   @media (any-hover:hover) {
     &:hover {
       background-color: $blueHoverColor;
@@ -102,16 +117,17 @@ $fourthTitleSize: toRem(16);
   display: inline-block;
   border: none;
   position: relative;
-  background-color: $blueColor;
+  background-color: $whiteColor;
   color: $blueColor;
   transition: $mainTransition;
   font-size: toRem(16);
-  font-weight: 700;
+  font-weight: 400;
   line-height: toRem(24);
   border-radius: toRem(4);
-  padding: toRem(10);
+  padding: toRem(6) toRem(16);
+  font-family: inherit;
   border: 1px solid $blueColor;
-
+  overflow: hidden;
   @media (any-hover:hover) {
     &:hover {
       background-color: $whiteColor300;
@@ -143,10 +159,4 @@ $fourthTitleSize: toRem(16);
   #{$property}: calc(#{$k} * 100vw + #{$b})
 }
 
-// functions
-
-@function toRem($value) {
-  $remValue: calc($value / 16) + rem; 
-  @return $remValue;
-}
 

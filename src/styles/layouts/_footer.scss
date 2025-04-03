@@ -3,6 +3,15 @@
 .footer {
    padding-top: toRem(36);
    background-color: $greyColor300;
+   @media (max-width: $tablet) {
+      padding-top: toRem(24);
+      margin-bottom: toRem(72);
+   }
+}
+.footer__container {
+   @media (max-width: $tablet) {
+      padding: 0 toRem(18) !important;
+   }
 }
 
 .footer__subscribe-wrapper {
@@ -11,6 +20,12 @@
    gap: toRem(20);
    margin-bottom: toRem(60);
    align-items: center;
+   @media (max-width: $tablet) {
+      flex-direction: column;   
+      margin-bottom: toRem(36);
+      gap: toRem(16);
+   }
+   
 }
 
 .footer__subscribe-text {
@@ -19,6 +34,10 @@
    flex-shrink: 1;
    font-weight: 700;
    color: $blueDarkColor;
+   @media (max-width: $tablet) {
+      flex-basis: content;
+      gap: toRem(16);
+   }
 }
 
 .footer__subscribe-form {
@@ -28,7 +47,13 @@
    display: flex;
    gap: toRem(20);
    align-items: center;
-   height: toRem(40)
+   height: toRem(40);
+   @media (max-width: $tablet) {
+      flex-basis: content;
+      width: 100%;
+      justify-content: space-between;
+   }
+
 }
 
 .footer__subscribe-input {
@@ -43,6 +68,12 @@
       outline: none !important;
       border:1px solid $blueColor;
    }
+   @media (max-width: $tablet) {
+      flex-basis: content;
+      height: toRem(44);
+      max-width: toRem(729);
+   }
+
 }
 .footer__subscribe-btn {
    @include main-btn;
@@ -50,16 +81,27 @@
    height: 100%;
    flex-shrink: 1;
    flex-grow: 1;
+   @media (max-width: $tablet) {
+      flex-basis: content;
+      height: toRem(44);
+      max-width: toRem(163);
+   }
 }
 .footer__content {
    display: flex;
    justify-content: space-between;
    gap: toRem(20);
+   @media (max-width: $tablet) {
+      margin: 0 auto;
+   }
 }
 .footer__about {
    flex-basis: toRem(293);
    flex-grow: 2;
    flex-shrink: 1;
+   @media (max-width: $tablet) {
+      display: none;
+   }   
    & img {
       height: toRem(44);
       object-fit: contain;
@@ -77,13 +119,19 @@
    grid-template-columns: repeat(4, minmax(toRem(120), toRem(190)));
    gap: toRem(20);
    margin-bottom: toRem(60);
+   @media (max-width: $tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      flex-basis: 100%;
+      margin-bottom: toRem(24);
+      gap: toRem(10);
+   }   
 }
 
 .footer__connect-wrapper {
    display: flex;
    flex-direction: column;
-   gap: toRem(18);
-   margin-bottom: toRem(18);
+   gap: toRem(16);
+   margin-bottom: toRem(30);
    & a {
       display: inline-flex;
       align-items: center;
@@ -95,6 +143,12 @@
          }
        } 
    }
+   & p {
+      display: none;
+      @media (max-width: $tablet) {
+         display: block;
+      }
+   }
 }
 
 .footer__write-btn {
@@ -102,10 +156,16 @@
    width: toRem(150);
    height: toRem(40);
    line-height: 1;
+   @media (max-width: $tablet) {
+      height: toRem(44);
+   }
 }
 
 .footer__title {
    margin-bottom: toRem(18);
+   @media (max-width: $tablet) {
+      margin-bottom: toRem(16);
+   }
 }
 
 .footer__messenger-wrapper {
@@ -117,7 +177,7 @@
 .footer__info-list {
    display: flex;
    flex-direction: column;
-   gap: toRem(18);
+   gap: toRem(16);
    & a {
       @media (any-hover:hover) {
         &:hover {
@@ -130,7 +190,7 @@
 .footer__buyers-list {
    display: flex;
    flex-direction: column;
-   gap: toRem(18);
+   gap: toRem(16);
    & a {
       @media (any-hover:hover) {
         &:hover {
@@ -142,6 +202,9 @@
 .footer__copyright {
    background-color: $whiteColor200;
    padding: toRem(10) 0;
+   @media (max-width: $tablet) {
+      padding: toRem(16) 0;
+   }
 }
 .footer__copyright-wrapper {
    display: flex;
@@ -156,6 +219,9 @@
 }
 .footer__agreement {
    color: $greyColor600;
+   @media (max-width: $tablet) {
+      font-size: toRem(12);
+   }
    & a {
       text-decoration: underline;
       text-underline-offset: toRem(2);
