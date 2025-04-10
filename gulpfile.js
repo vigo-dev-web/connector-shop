@@ -14,7 +14,7 @@ function cleanDist() {
   }
 
 function watching() {
-  gulp.watch(`${paths.src}**/*.html`, gulp.parallel(html))
+  gulp.watch(`${paths.src}**/*.{html,htm}`, gulp.parallel(html))
   gulp.watch(`${paths.src}styles/**/*.scss`, gulp.parallel(styles))
   gulp.watch(`${paths.src}js/**/*.js`, gulp.parallel(scripts))
 }

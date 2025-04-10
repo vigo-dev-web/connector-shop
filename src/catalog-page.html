@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/index.css">
+   <script defer src="js/index.js"></script>
+   <title>Document</title>
+</head>
+
+<body class="body">
+   <div class="app__wrapper">
+      @@include('html/_header.htm')
+      @@include('html/_headerMobile.htm')
+      <main>
+         <section class="catalog">
+            <div class="catalog__container container">
+               <div class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li><a href="#">Главная</a><img src="./img/icons/arrow-right.svg" alt="стрелка"></li>
+                     <li><span>Каталог</span></li>
+                  </ul>
+               </div>
+               <h2 class="catalog__title">Каталог</h2>
+               <ul class="catalog__list">
+                  <li><a href="#"><span>Контактные вставки</span><img src="./img/icons/arrow-right.svg" alt="ссылка"></a></li>
+                  <li><a href="#"><span>Корпусы</span><img src="./img/icons/arrow-right.svg" alt="ссылка"></a></li>
+                  <li><a href="#"><span>Обжимные контакты</span><img src="./img/icons/arrow-right.svg" alt="ссылка"></a></li>
+                  <li><a href="#"><span>Комплекты контактных вставок</span><img src="./img/icons/arrow-right.svg" alt="ссылка"></a></li>
+                  <li><a href="#"><span>Комплекты промышленных разъёмов</span><img src="./img/icons/arrow-right.svg" alt="ссылка"></a></li>
+                  <li><a href="#"><span>Полукомплекты (кожух + вставка)</span><img src="./img/icons/arrow-right.svg" alt="ссылка"></a></li>
+                  <li><a href="#"><span>Сальники</span><img src="./img/icons/arrow-right.svg" alt="ссылка"></a></li>
+                  <li><a href="#"><span>Аксессуары</span><img src="./img/icons/arrow-right.svg" alt="ссылка"></a></li>
+               </ul>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm')
+   </div>
+   @@include('html/_scroll.htm')
+   @@include('html/_modal.htm')
+</body>
+
+</html>

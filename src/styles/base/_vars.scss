@@ -62,7 +62,8 @@ $ps: toEm($containerWidth);
 $tablet: toEm(991.98);
 $sTablet: toEm(767.98);
 $mobile: toEm(575.98);
-$sMobile: toEm(320);
+$sMobile: toEm(479.98);
+// $sMobile: toEm(320);
 
 // fonts
 $baseFont: "PT Root UI", sans-serif;
@@ -115,16 +116,15 @@ $fifthTitleSize: toRem(16);
 
 @mixin stroke-btn {
   display: inline-block;
-  border: none;
   position: relative;
   background-color: $whiteColor;
   color: $blueColor;
   transition: $mainTransition;
   font-size: toRem(16);
   font-weight: 400;
-  line-height: toRem(24);
+  line-height: toRem(1);
   border-radius: toRem(4);
-  padding: toRem(6) toRem(16);
+  padding: toRem(7) toRem(16);
   font-family: inherit;
   border: 1px solid $blueColor;
   overflow: hidden;
@@ -152,7 +152,7 @@ $fifthTitleSize: toRem(16);
 }
 
 @mixin adaptiveValue($property, $S-max, $S-min ) {
-  $k: calc(($S-max - $S-min)/(768 - 320));
+  $k: calc(($S-max - $S-min)/(768 - 360));
   $b: $S-min - $k * 320;
 
   $b: $b + px;

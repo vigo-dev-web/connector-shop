@@ -22,3 +22,13 @@ export const isTargetElement = (element, eventTarget) => {
 	return element.contains(eventTarget) 		
 }
 
+export const decrementCounter = (initialValue, renderValueEl) => {
+	if (initialValue > 1) {
+		initialValue--
+
+	}
+	renderValueEl.textContent = initialValue
+	return initialValue
+}
+
+
