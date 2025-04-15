@@ -1,6 +1,14 @@
 @import '../base/vars';
 @import '../base/base';
 @import './product-select';
+@import './catalog-page';
+@import './catalog_section';
+@import './product-desc';
+@import './404';
+@import './news';
+@import './articales';
+@import './documentation';
+
 
 .banner
 {
@@ -130,6 +138,15 @@
    height: toRem(4) !important;
    width: toRem(16) !important;
    border-radius: toRem(4) !important;
+   &::after
+   {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 21px;
+      top: -8px;
+      cursor: pointer;
+   }
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active
@@ -596,7 +613,11 @@ h2.benefits__title
    position: relative;
 }
 
-.swiper
+.swiper.banner-slider,
+.swiper.news-slider,
+.swiper.articles-slider,
+.swiper.documents-slider,
+.swiper.brands-slider
 {
    overflow: unset !important;
    overflow-x: hidden !important;
@@ -713,11 +734,13 @@ h2.benefits__title
 .news__item,
 .articles__item,
 .documents__item
-{  display: block;
+{
+   display: block;
    border: 1px solid $greyColor400;
    border-radius: toRem(4);
    padding: toRem(24) 0;
    overflow: hidden;
+
    &>div:first-child
    {
       display: flex;
@@ -730,15 +753,20 @@ h2.benefits__title
       {
          padding: 0 toRem(16);
       }
-      @media (max-width: $mobile) {
-         padding: 0 toRem(12);         
+
+      @media (max-width: $mobile)
+      {
+         padding: 0 toRem(12);
       }
    }
+
    @media (max-width: $tablet)
    {
       padding: toRem(16) 0;
    }
-   @media (max-width: $mobile) {
+
+   @media (max-width: $mobile)
+   {
       padding: toRem(12) 0;
    }
 
@@ -757,12 +785,16 @@ h2.benefits__title
          align-items: center;
          justify-content: center;
       }
-      @media (max-width: $mobile) {
+
+      @media (max-width: $mobile)
+      {
          transition: none;
          height: 100%;
          width: 100%;
          position: absolute;
          opacity: 0;
+         color: transparent;
+         background-color: transparent;
       }
    }
 
@@ -770,11 +802,14 @@ h2.benefits__title
    {
       max-height: toRem(180);
       overflow: hidden;
+
       & img
       {
          width: 100%;
          object-fit: contain;
-         @media (max-width: $mobile) {
+
+         @media (max-width: $mobile)
+         {
             max-height: toRem(132);
             object-fit: fill;
          }

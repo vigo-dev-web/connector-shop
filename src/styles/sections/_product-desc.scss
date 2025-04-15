@@ -1,0 +1,176 @@
+@import '../base/vars';
+@import '../base/base';
+
+.product-desc__title-container {
+   margin-bottom: toRem(36);
+   & h2 {
+      margin-bottom: toRem(16);
+   }
+
+}
+.product-desc__testimonials-rating {
+   display: flex;
+   gap: toRem(16);
+   align-items: center;
+   & ul {
+      display: flex;
+      gap: toRem(4);
+      align-items: flex-end;
+      & li > img {
+         display: block;
+         height: toRem(20);
+      }
+   }
+   & a {
+      display: inline-block;
+      line-height: 1.5;
+   }
+}
+.product-desc__about {
+}
+.product-desc__about-grid {
+}
+.product-desc__about-item {
+}
+.product-desc__photo-container {
+}
+.product-desc__main-photo-container {
+}
+.product-desc__card {
+}
+.product-desc__card-name {
+}
+.product-desc__short {
+}
+.product-desc__prop-link {
+}
+.product-desc__features {
+}
+.product-desc__cart-wrapper {
+}
+.product-desc__cart-actions {
+}
+.product-desc__cart-item {
+}
+.product-desc__cart-btn {
+}
+.product-desc__options {
+}
+.product-desc__props {
+}
+.product-desc__container {
+}
+.product-desc__props-nav {
+}
+.product-desc__props-nav-list {
+}
+.product-desc__props-img {
+}
+.product-desc__props-show {
+}
+.product-desc__props-wrapper {
+}
+.product-desc__props-desc {
+}
+.product-desc__props-technical {
+}
+.product-desc__technical-container {
+}
+.product-desc__technical-row {
+}
+.product-desc__props-options {
+}
+.product-desc__brand {
+}
+.product-desc__country {
+}
+.product-desc__complectation {
+}
+.product-desc__pack {
+}
+.product-desc__docs {
+}
+.product-desc__logo {
+}
+.product-desc__products {
+}
+.product-desc__products-title {
+}
+.product-page__grid {
+}
+.card-layout {
+}
+.hide-subsequent-rows {
+}
+.product-page__item {
+}
+.product-page__item-wrapper {
+}
+.swiper {
+}
+.product-page-slider {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination-product {
+}
+.product-page__label-btn {
+}
+.product-page__label {
+}
+.product-page__title-container {
+}
+.product-page__info-container {
+}
+.product-page__add-cart {
+}
+.product-desc__analog {
+}
+.product-desc__analog-title {
+}
+.product-desc__analog-invite {
+}
+.product-desc__connection {
+}
+.product-desc__connection-select {
+}
+.product-desc__testimonial-item {
+}
+.product-desc__item-wrapper {
+}
+.product-desc__item-content {
+}
+.product-desc__item-gallery {
+}
+.product-desc__item-img {
+}
+.product-desc__item-sort {
+}
+.product-desc__item-sort-left {
+}
+.product-desc__item-sort-right {
+}
+.product-desc__item-client {
+}
+.product-desc__client-name {
+}
+.product-desc__client-rating {
+}
+.product-desc__benefit {
+}
+.product-desc__likes {
+}
+.product-desc__answer {
+}
+.product-desc__item-rating {
+}
+.product-desc__progress {
+}
+.product-desc__progress-item {
+}
+.product-desc__progress-level {
+}
+.product-desc__item-btn {
+}

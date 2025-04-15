@@ -23,9 +23,9 @@ const swiper = new Swiper('.banner-slider', {
 })
 
 const swiperProduct = new Swiper('.product-page-slider', {
-	modules: [EffectFade, Pagination, Autoplay],
-	loop: true,
-	grabCursor: true,
+	modules: [EffectFade, Pagination],
+	loop: false,
+	grabCursor: false,
 	pagination: {
 		el: '.swiper-pagination-product',
 		clickable: true,

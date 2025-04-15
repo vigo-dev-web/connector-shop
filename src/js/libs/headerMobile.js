@@ -1,11 +1,38 @@
-const burgerBtn = document.querySelector('#menu-burger')
-const mobileMenu = document.querySelector('#mobile-menu')
-const body = document.body
+import { addClass, removeClass, isTargetElement, addPadding, removePadding} from '../files/functions.js'
 
-burgerBtn.addEventListener('click', () => {
-   mobileMenu.classList.toggle('-open') //open mobile menu
-   body.classList.toggle('-lock') //remove scrollbar
-   burgerBtn.classList.toggle('-active') // change style burger-btn
+const menuBtn = document.querySelector('.mobile__side-btn')
+const mobileMenu = document.querySelector('#mobile__side')
+const closeBtn = document.querySelector('.mobile__side-right').firstElementChild
+const body = document.body
+const initialPadding = window.getComputedStyle(body).paddingRight
+
+const closeMenuOverlay = (e) => {
+	if (
+		(!isTargetElement(mobileMenu.firstElementChild, e.target) && !isTargetElement(menuBtn, e.target) && mobileMenu.classList.contains('_active')) ||
+		e.target.hasAttribute('data-link') ||
+		e.target.parentElement.hasAttribute('data-link')
+	) {
+		removeClass(mobileMenu, '_active')
+		removePadding(body, initialPadding)
+		body.style.overflowY = 'auto'	
+	}
+}
+
+menuBtn.addEventListener('click', () => {
+	addClass(mobileMenu, '_active')
+	body.style.overflowY = 'hidden'
+	addPadding(body)
 })
 
-console.log('Mobile menu has been connected...')
+closeBtn.addEventListener('click', () => {
+	removeClass(mobileMenu, '_active')
+	removePadding(body, initialPadding)
+	body.style.overflowY = 'auto'
+})
+
+document.addEventListener('click', (e) => {
+	e.stopPropagation()
+	closeMenuOverlay(e)
+})
+
+console.log('Header menu has been connected...')

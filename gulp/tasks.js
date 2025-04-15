@@ -7,6 +7,7 @@ function html () {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe((plugins.replace(/@img\//g, 'img/')))
     .pipe(gulp.dest(`${paths.dist}`))
     .pipe(plugins.browserSync.stream())
   )
@@ -16,6 +17,8 @@ function styles () {
   return (
     gulp.src(`${paths.src}styles/*.scss`)
     .pipe(plugins.scss())
+    .pipe((plugins.replace(/@img\//g, '../img/')))
+    .pipe((plugins.replace('../../fonts/', '../fonts/')))
     .pipe(plugins.autoPrefixer({cascade: false}))
     .pipe(gulp.dest(`${paths.dist}styles/`))
     .pipe(plugins.browserSync.stream())

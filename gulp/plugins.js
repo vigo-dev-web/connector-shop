@@ -10,6 +10,7 @@ import webp from 'gulp-webp'
 import autoPrefixer from 'gulp-autoprefixer'
 import fonter from 'gulp-fonter'
 import ttf2woff2 from 'gulp-ttf2woff2'
+import replace from 'gulp-replace'
 import { paths } from './index.js'
 
 
@@ -25,6 +26,7 @@ const plugins = {
    autoPrefixer,
    fonter,
    ttf2woff2,
+   replace,
    browserSync: browserSync.init({
       server: {
       baseDir: `${paths.dist}`
@@ -36,6 +38,9 @@ const plugins = {
       mode: 'development',
       output: {
         filename: 'index.js'
+      },
+      optimization: {
+         minimize: false
       },
       module: {
          rules: [
