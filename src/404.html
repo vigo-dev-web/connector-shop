@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/index.css">
+   <script defer src="js/index.js"></script>
+   <title>404</title>
+</head>
+
+<body class="body">
+   <div class="app__wrapper">
+      @@include('html/_header.htm')
+      @@include('html/_headerMobile.htm')
+      <main>
+         <section class="error">
+            <div class="error__container container">
+               <div class="error__img-container">
+                  <img src="@img/content/404.jpg" alt="404">
+               </div>
+               <div class="error__content">
+                  <h3>Похоже, такой страницы не существует</h3>
+                  <div class="error__btn-container">
+                     <button>Перейти на главную</button>
+                     <button>Написать нам</button>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm')
+   </div>
+   @@include('html/_scroll.htm')
+   @@include('html/_modal.htm')
+</body>
+
+</html>

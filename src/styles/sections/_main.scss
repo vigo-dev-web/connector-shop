@@ -8,6 +8,9 @@
 @import './news';
 @import './articales';
 @import './documentation';
+@import './producer';
+@import './questions';
+@import './news-page';
 
 
 .banner
@@ -773,17 +776,17 @@ h2.benefits__title
    & a
    {
       @include main-btn;
-      width: toRem(130);
+      width: toRem(150);
       text-align: center;
       margin: 0 auto;
 
       @media (max-width: $tablet)
       {
-         width: toRem(143);
-         height: toRem(28);
+         height: toRem(44);
          display: flex;
          align-items: center;
          justify-content: center;
+         @include adaptiveValue(width, 163, 90)
       }
 
       @media (max-width: $mobile)

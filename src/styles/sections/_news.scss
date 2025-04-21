@@ -1,0 +1,28 @@
+.news__title {
+   display: flex;
+   flex-direction: column;
+   gap: toRem(16);
+   margin-bottom: toRem(40);
+   @media (max-width: $tablet) {
+      margin-bottom: toRem(24);      
+      gap: toRem(12);
+   }
+   @media (max-width: $mobile) {
+      margin-bottom: toRem(20);   
+      margin-top: toRem(-4);         
+   }
+}
+.card__item-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: toRem(20);
+   margin-bottom: toRem(20);
+   @media (max-width: $tablet) {
+      grid-template-columns: 1fr 1fr 1fr;      
+   }
+   @media (max-width: $mobile) {
+      grid-template-columns: 1fr 1fr;
+      gap: toRem(8);      
+      margin-bottom: toRem(16);
+   }
+}

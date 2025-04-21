@@ -214,6 +214,9 @@
       padding: 7px 23px 7px 12px;
       padding-bottom: 7px !important;
       color: $textThirdColor;
+      @media (max-width: $mobile) {
+         height: toRem(44);
+      }
    }
 
    & .choices__placeholder
@@ -314,17 +317,23 @@
    display: flex;
    justify-content: space-between;
    gap: toRem(16);
-
+   @media (max-width: $tablet) {
+      margin-bottom: toRem(16);         
+   }
+   @media (max-width: $mobile) {
+      margin-bottom: toRem(20);
+   }
+   
    &>div:first-child
    {
       width: 100%;
-      max-width: toRem(215);
-
-      @media (max-width: $tablet)
-      {
-         // width: 100%;
-         // max-width: toRem(301);   
+      max-width: toRem(215);   
+      @media (max-width: $tablet) {
+         max-width: toRem(224);   
       }
+      @media (max-width: $mobile) {
+         max-width: toRem(180);   
+      }      
    }
 }
 
