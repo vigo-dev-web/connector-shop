@@ -201,6 +201,7 @@
    flex-basis: 130px;
    flex-grow: 1;
    flex-shrink: 0;
+   height: toRem(44);
    & img {
       width: toRem(16);
       object-fit: contain;
@@ -358,7 +359,6 @@
    font-weight: 700;
    font-size: toRem(16);
    transition: $mainTransition;
-   // overflow: hidden;
    position: relative;
    & li {
       @media (any-hover:hover) {

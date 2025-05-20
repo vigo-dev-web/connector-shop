@@ -4,7 +4,6 @@ const toggleLayoutBtn = document.querySelectorAll('.toggle__layout')
 
 const pageSizeElArr = document.querySelectorAll('.product-page__page-count')
 const changePageBtn = document.querySelector('.product-page__change-btn')
-// const paginationPopUp = changePageBtn.parentElement.nextElementSibling
 const pageNumberArr = document.querySelectorAll('.product-page__page-list > li > button')
 const addCartBtnArr = document.querySelectorAll('.product-page__add-cart')
 const removeFilterBtn = document.querySelector('.product-page__open-filter')
@@ -40,7 +39,7 @@ const changeLayoutIcon = (currentBtn) => {
 
 // check favourite product
 
-favouriteLabel.forEach((item) => {
+favouriteLabel.forEach((item) => {	
 	item.addEventListener('click', () => toggleClass(item, '_active'))
 })
 

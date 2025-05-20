@@ -27,7 +27,7 @@ $filter: brightness(0) saturate(100%) invert(33%) sepia(58%) saturate(1829%) hue
 // interactions
 
 $boxShadow: 0 0 10px 0 rgba(6, 44, 65, 0.16);
-$mainTransition: all .3s ease-out;
+$mainTransition: all .2s ease-out;
 
 // functions
 
@@ -85,13 +85,6 @@ $fifthTitleSize: toRem(16);
   line-height: 1.2;
   color: $titleColor;
 }
-
-// @mixin secondTitle {
-//   font-size: $secondTitleSize;
-//   font-weight: 700;
-//   line-height: toRem(44);
-//   color: $blackColor;
-// }
 
 @mixin main-btn {
   display: inline-block;

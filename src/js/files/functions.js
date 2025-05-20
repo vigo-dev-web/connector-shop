@@ -1,11 +1,3 @@
-console.log('functions is ready')
-
-const fetchData = async () => {
-	const url = ''
-	const response = await fetch(url)
-	const data = await response.json()
-}
-
 export const getLog = (text, value) => {
 	console.log(`${text} ${value}`)
 } 
@@ -45,6 +37,3 @@ export const addPadding = (htmlElem) => {
 export const removePadding = (htmlElem, initialPadding) => {
 	htmlElem.style.paddingRight = initialPadding
 }
-
-
-

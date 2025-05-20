@@ -1,4 +1,8 @@
-.news__title {
+.news.section {
+   overflow: hidden;
+}
+
+.news__title-body {
    display: flex;
    flex-direction: column;
    gap: toRem(16);

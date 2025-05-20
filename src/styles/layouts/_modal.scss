@@ -1,4 +1,4 @@
-@import '../base//vars';
+@import '../base/vars';
 
 .modal {
    position: fixed;
@@ -12,10 +12,10 @@
    overflow: hidden;
    cursor: pointer;
    transition: $mainTransition;
-   z-index: 99999;
+   z-index: 200;
 }
 
-.modal.--open {
+.modal._open {
    opacity: 1;
    visibility: visible;
 }
@@ -26,26 +26,37 @@
    justify-content: center;
    align-items: center;
    padding: toRem(10);
+   z-index: 300;
+   @media (max-width: $mobile) {
+      padding: 0;
+   }
+}
+
+.modal__close {
+   color: $greyColor500;
+   font-weight: 400;
 }
 
 .modal__body {
    position: relative;
    background-color: $whiteColor;
-   padding: 1rem toRem(20);
-   width: toRem(450);
-   opacity: 0;
-   transform: translateY(-100%);
+   padding: toRem(36);
+   width: 100%;
+   max-width: toRem(414);
+   border-radius: toRem(4);
    cursor: default;
    transition: $mainTransition;
+   box-shadow: $boxShadow;
+   overflow: hidden;
 
-   @media (max-width: $sMobile) {
-      width: toRem(320);
+   @media (max-width: $mobile) {
+      max-width: none;
+      width: 100%;
+      height: 100vh;
+      border-radius: unset;
+      padding-top: toRem(40);
+      padding-inline: toRem(16);
    }
-}
-
-.modal__body.--open {
-   opacity: 1;
-   transform: translateY(0);
 }
 
 .modal__close {
@@ -54,3 +65,74 @@
    top: toRem(16);
    cursor: pointer;
 }
+
+.modal__title {
+   margin-bottom: toRem(16);
+   line-height: toRem(44);
+}
+
+.modal__input-container {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: toRem(4);
+   div:last-child {
+      position: relative;
+      .password-toggle {
+         display: none;
+         position: absolute;
+         top: 50%;
+         transform: translateY(-100%);
+         right: toRem(16);
+         cursor: pointer;
+         background: none;
+         padding: 0;
+      }
+      .password-toggle._active {
+         display: block;
+      }
+   }
+}
+
+#input-email, #input-password {
+   width: 100%;
+   height: toRem(44);
+   border-radius: toRem(4);
+   padding: toRem(3) toRem(50) toRem(3) toRem(16);
+   border: 1px solid $greyColor400;
+   &:focus {
+      outline: none !important;
+      border:1px solid $blueColor;
+   }
+
+}
+
+.modal__error {
+   color: $orangeColor;
+   margin-bottom: toRem(10);
+   height: toRem(15);
+   font-size: toRem(12);
+}
+
+.modal__forget-password {
+   color: $blueColor;
+   display: inline-block;
+   margin-bottom: toRem(16);
+   line-height: toRem(24);
+}
+
+.modal__btn {
+   @include main-btn;
+   margin-bottom: toRem(16);
+   font-weight: 700;
+   width: 100%;
+   height: toRem(44);
+}
+
+.modal__policy {
+   color: $greyColor600;
+   a {
+      color: $blueColor;
+      text-decoration: underline;
+   }
+}
+

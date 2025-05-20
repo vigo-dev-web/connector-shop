@@ -181,7 +181,7 @@
       flex-basis: toRem(52);
       flex-grow: 0;
       flex-shrink: 0;
-
+      height: toRem(44);
       @media (max-width: $mobile)
       {
          display: none;
@@ -379,8 +379,7 @@
    margin: 0 auto;
    position: fixed;
    bottom: 0;
-   left: 0;
-   right: 0;
+   width: 100%;
    z-index: 160;
    background-color: $whiteColor;
    box-shadow: $boxShadow;

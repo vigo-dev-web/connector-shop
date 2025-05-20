@@ -13,42 +13,39 @@ import ttf2woff2 from 'gulp-ttf2woff2'
 import replace from 'gulp-replace'
 import { paths } from './index.js'
 
-
-const scss = gulpSass(sass);
+const scss = gulpSass(sass)
 
 const plugins = {
-   scss,
-   fileInclude,
-   clean,
-   imagemin,
-   newer,
-   webp,
-   autoPrefixer,
-   fonter,
-   ttf2woff2,
-   replace,
-   browserSync: browserSync.init({
-      server: {
-      baseDir: `${paths.dist}`
-      },
-      notify: false,
-      port: 3001
-   }),
-   webpackStream: webpackStream({
-      mode: 'development',
-      output: {
-        filename: 'index.js'
-      },
-      optimization: {
-         minimize: false
-      },
-      module: {
-         rules: [
-            {test: /\.(sass|scss|less|css)$/,
-            use: ["style-loader", "css-loader", 'sass-loader'],}
-         ]
-      }
-    })
+	scss,
+	fileInclude,
+	clean,
+	imagemin,
+	newer,
+	webp,
+	autoPrefixer,
+	fonter,
+	ttf2woff2,
+	replace,
+	browserSync: browserSync.init({
+		server: {
+			baseDir: `${paths.dist}`
+		},
+		notify: false,
+		port: 3001
+	}),
+	webpack: () =>
+		webpackStream({
+			mode: 'development',
+			output: {
+				filename: 'index.js'
+			},
+			optimization: {
+				minimize: false
+			},
+			module: {
+				rules: [{ test: /\.(sass|scss|less|css)$/, use: ['style-loader', 'css-loader', 'sass-loader'] }]
+			}
+		})
 }
 
 export default plugins

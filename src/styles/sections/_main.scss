@@ -11,6 +11,7 @@
 @import './producer';
 @import './questions';
 @import './news-page';
+@import './photo-view';
 
 
 .banner
@@ -596,6 +597,7 @@ h2.benefits__title
 .news
 {
    margin-bottom: toRem(80);
+   overflow-x: hidden;
 
    @media (max-width: $tablet)
    {
@@ -743,7 +745,7 @@ h2.benefits__title
    border-radius: toRem(4);
    padding: toRem(24) 0;
    overflow: hidden;
-
+   position: relative;
    &>div:first-child
    {
       display: flex;
@@ -795,6 +797,8 @@ h2.benefits__title
          height: 100%;
          width: 100%;
          position: absolute;
+         left: 0;
+         top: 0;
          opacity: 0;
          color: transparent;
          background-color: transparent;
@@ -839,7 +843,7 @@ h2.benefits__title
 .articles
 {
    margin-bottom: toRem(80);
-
+   overflow-x: hidden;
    @media (max-width: $tablet)
    {
       margin-bottom: toRem(56);
@@ -873,6 +877,7 @@ h2.benefits__title
 .documents
 {
    margin-bottom: toRem(80);
+   overflow-x: hidden;
 
    @media (max-width: $tablet)
    {
@@ -908,6 +913,7 @@ h2.benefits__title
 .brands
 {
    margin-bottom: toRem(80);
+   overflow-x: hidden;
 
    @media (max-width: $tablet)
    {

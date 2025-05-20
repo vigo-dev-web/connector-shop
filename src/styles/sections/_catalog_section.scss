@@ -85,7 +85,7 @@
       
    }
    @media (max-width: $sTablet) {
-      grid-template-columns: repeat(3, minmax(150px, 225px));
+      grid-template-columns: repeat(2, minmax(150px, 225px));
    }
 }
 

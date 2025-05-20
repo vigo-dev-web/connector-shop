@@ -52,6 +52,6 @@
   },
   "dependencies": {
     "choices.js": "^11.1.0",
-    "swiper": "^11.1.1"
+    "swiper": "^11.2.6"
   }
 }

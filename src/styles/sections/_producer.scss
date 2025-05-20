@@ -38,6 +38,19 @@
       margin-bottom: toRem(16);
    }
 }
+
+.product-page__grid.card-layout.hide-subsequent-rows {
+   grid-template-columns: repeat(4, 1fr);
+   @media (max-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: toRem(12);   
+   }
+   @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: toRem(8);   
+   }
+}
+
 .producer__img-container {
    flex: 3 0 toRem(295);
    display: flex;

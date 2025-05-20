@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/index.css">
+   <script defer src="js/index.js"></script>
+   <title>Отзыв товара | фото</title>
+</head>
+
+<body class="body">
+   <div class="app__wrapper">
+      @@include('html/_header.htm')
+      @@include('html/_headerMobile.htm')
+      <main>
+         <section class="photo">
+            <div class="photo__container container">
+               <div class="photo-main__slider">
+                  <div class="swiper thumbPhoto">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos-2.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos-2.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos-2.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos-2.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos-2.jpg" alt="товар">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper mainSwiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos-2.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos-2.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/review_photos-2.jpg" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-21.png" alt="товар">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="@img/products/photo-gallery-1.png" alt="товар">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-button-next photo"></div>
+                  <div class="swiper-button-prev photo"></div>
+               </div>
+               <div class="photo__bottom-wrapper">
+                  <div class="photo__bottom-left"></div>
+                  <div class="photo__rating-wrapper">
+                     <div class="photo__rating-content">
+                        <p>Александр В.</p>
+                        <p>21.05.24</p>
+                        <ul class="photo__rating-stars">
+                           <li><img src="@img/icons/star.svg" alt="оценка"></li>
+                           <li><img src="@img/icons/star.svg" alt="оценка"></li>
+                           <li><img src="@img/icons/star.svg" alt="оценка"></li>
+                           <li><img src="@img/icons/star.svg" alt="оценка"></li>
+                           <li><img src="@img/icons/star.svg" alt="оценка"></li>
+                        </ul>
+                     </div>
+                     <a href="#" class="photo__rating-link">
+                        Перейти к отзыву
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm')
+   </div>
+   @@include('html/_modal.htm')
+</body>
+
+</html>
