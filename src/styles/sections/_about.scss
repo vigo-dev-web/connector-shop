@@ -1,0 +1,345 @@
+@import '../base/vars';
+
+.about-company
+{
+   margin-bottom: toRem(80);
+
+   @media (max-width: $tablet)
+   {
+      margin-bottom: toRem(56);
+   }
+
+   @media (max-width: $mobile)
+   {
+      margin-bottom: toRem(36);
+   }
+}
+
+.about-company__title
+{
+   margin-bottom: toRem(40);
+
+   @media (max-width: $tablet)
+   {
+      margin-bottom: toRem(32);
+   }
+
+   @media (max-width: $mobile)
+   {
+      margin-bottom: toRem(16);
+      margin-top: toRem(-4);
+   }
+}
+
+.about-company__img-container
+{
+   position: relative;
+   border-radius: toRem(8);
+   height: toRem(476);
+   margin-bottom: toRem(52);
+
+   @media (max-width: $tablet)
+   {
+      margin-bottom: toRem(43);
+      height: toRem(360);
+      border-radius: toRem(4);
+   }
+
+   @media (max-width: $mobile)
+   {
+      margin-bottom: toRem(36);
+      height: toRem(320);
+   }
+
+   img
+   {
+      object-fit: fill;
+      height: 100%;
+      width: 100%;
+   }
+}
+
+.about-company__text-content
+{
+   position: absolute;
+   top: toRem(36);
+   left: toRem(40);
+   border-radius: toRem(8);
+   background-color: $whiteColor;
+   padding: toRem(24);
+   max-width: toRem(465);
+   width: 100%;
+
+   @media (max-width: $tablet)
+   {
+      max-width: toRem(379);
+      padding: toRem(16);
+      top: toRem(24);
+      left: toRem(24);
+      border-radius: toRem(4);
+   }
+
+   @media (max-width: $mobile)
+   {
+      max-width: none;
+      padding: toRem(12);
+      top: toRem(12);
+      left: toRem(12);
+      width: calc(100% - 24px);
+   }
+}
+
+.about-company__text
+{
+   color: $blueColor;
+   font-size: toRem(24);
+   line-height: toRem(36);
+   font-weight: 700;
+
+   @media (max-width: $tablet)
+   {
+      font-size: toRem(20);
+      line-height: toRem(30);
+   }
+
+   @media (max-width: $tablet)
+   {
+      font-size: toRem(16);
+      line-height: toRem(24);
+   }
+}
+
+.about-company__quote-container
+{
+   position: relative;
+   border: 2px solid $blueColor;
+   margin-bottom: toRem(24);
+   padding: toRem(25) toRem(50) toRem(26) toRem(80);
+
+   @media (max-width: $tablet)
+   {
+      padding: toRem(32) toRem(36);
+   }
+
+   @media (max-width: $mobile)
+   {
+      padding: toRem(25);
+      margin-bottom: toRem(22);
+   }
+}
+
+.about-company__quote-container::before,
+.about-company__quote-container::after
+{
+   position: absolute;
+   aspect-ratio: 1;
+   padding: toRem(10);
+   background-color: $whiteColor;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   line-height: 0;
+
+   @media (max-width: $tablet)
+   {
+      scale: 0.8;
+      padding: toRem(18);
+   }
+
+   @media (max-width: $mobile)
+   {
+      scale: 0.6;
+   }
+}
+
+.about-company__quote-container::before
+{
+   content: url("@img/icons/quotation-mark.png");
+   left: -2px;
+   bottom: 100%;
+   transform: translateY(50%);
+
+   @media (max-width: $tablet)
+   {
+      left: -10px;
+      transform: translateY(calc(50% + 10px));
+   }
+
+   @media (max-width: $mobile)
+   {
+      left: -22px;
+      transform: translateY(calc(50% + 22px));
+   }
+
+}
+
+.about-company__quote-container::after
+{
+   content: url("@img/icons/quotation-mark.png");
+   top: 100%;
+   right: -2px;
+   transform: translateY(-50%) rotate(180deg);
+
+   @media (max-width: $tablet)
+   {
+      right: -10px;
+      transform: translateY(calc(-50% - 10px)) rotate(180deg);
+   }
+
+   @media (max-width: $mobile)
+   {
+      right: -22px;
+      transform: translateY(calc(-50% - 22px)) rotate(180deg);
+   }
+
+
+}
+
+.about-company__quote-text
+{
+   font-size: toRem(24);
+   line-height: toRem(36);
+
+   @media (max-width: $mobile)
+   {
+      font-size: toRem(16);
+      line-height: toRem(24);
+   }
+}
+
+.about-company__author-container
+{
+   margin-bottom: toRem(60);
+   font-weight: 700;
+   font-size: toRem(18);
+   line-height: toRem(30);
+
+   @media (max-width: $tablet)
+   {
+      margin-bottom: toRem(44);
+      font-size: toRem(16);
+      line-height: toRem(24);
+   }
+
+   @media (max-width: $mobile)
+   {
+      margin-bottom: toRem(36);
+   }
+}
+
+.about-company__offer-container
+{
+   // margin-bottom: toRem(60);
+}
+
+.about-company__offer-title
+{
+   margin-bottom: toRem(36);
+
+   @media (max-width: $tablet)
+   {
+      margin-bottom: toRem(32);
+   }
+
+   @media (max-width: $mobile)
+   {
+      margin-bottom: toRem(16);
+   }
+}
+
+.about-company__offer-wrapper
+{
+   display: flex;
+   flex-direction: column;
+   gap: toRem(16);
+   margin-bottom: toRem(60);
+
+   @media (max-width: $tablet)
+   {
+      gap: toRem(24);
+      margin-bottom: toRem(36);
+   }
+
+   @media (max-width: $mobile)
+   {
+      gap: toRem(16);
+      margin-bottom: toRem(20);
+   }
+}
+
+.about-company__offer-item
+{
+   padding: toRem(32) toRem(32) toRem(42);
+   background-color: rgb(248, 249, 252);
+   border-radius: toRem(4);
+
+   @media (max-width: $tablet)
+   {
+      padding: toRem(24);
+   }
+
+   @media (max-width: $mobile)
+   {
+      padding: toRem(16);
+   }
+}
+
+.about-company__offer-top
+{
+   display: flex;
+   gap: toRem(8);
+   align-items: center;
+   margin-bottom: toRem(16);
+
+   img
+   {
+      display: block;
+      width: toRem(28);
+      height: toRem(28);
+   }
+
+   @media (max-width: $tablet)
+   {
+      gap: toRem(10);
+   }
+
+   @media (max-width: $mobile)
+   {
+      gap: toRem(8);
+      margin-bottom: toRem(12);
+      align-items: flex-start;
+   }
+}
+
+.about-company__btn-wrapper
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: toRem(20);
+   a {
+      @include stroke-btn;
+      width: toRem(190);
+      height: toRem(40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: $tablet) {
+         width: unset;
+         height: toRem(44);
+         flex: 1 1 33%;
+         padding-inline: toRem(6);
+      }
+      @media (max-width: $mobile) {
+         flex: unset;
+         width: 100%;
+      }
+   }
+   @media (max-width: $tablet) {
+      
+   }
+   @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: toRem(16);
+   }
+}

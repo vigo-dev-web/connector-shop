@@ -1,0 +1,308 @@
+@import '../base/vars';
+
+.contacts
+{
+   margin-bottom: toRem(80);
+
+   @media (max-width: $tablet)
+   {
+      margin-bottom: toRem(56);
+   }
+
+   @media (max-width: $mobile)
+   {
+      margin-bottom: toRem(36);
+   }
+}
+
+.contacts__title
+{
+   margin-bottom: toRem(16);
+
+   @media (max-width: $mobile)
+   {
+      margin-top: toRem(-4);
+      margin-bottom: toRem(12);
+   }
+}
+
+.contacts__text
+{
+   margin-bottom: toRem(40);
+
+   @media (max-width: $tablet)
+   {
+      margin-bottom: toRem(44);
+   }
+
+   @media (max-width: $mobile)
+   {
+      margin-bottom: toRem(28);
+   }
+
+}
+
+.contacts__wrapper
+{
+   display: flex;
+   justify-content: space-between;
+   gap: toRem(32);
+   margin-bottom: toRem(80);
+
+   @media (max-width: $tablet)
+   {
+      gap: toRem(20);
+      margin-bottom: toRem(44);
+   }
+
+   @media (max-width: 640px)
+   {
+      gap: toRem(16);
+      flex-direction: column;
+      margin-bottom: toRem(36);
+   }
+
+   @media (max-width: $mobile)
+   {
+      gap: toRem(32);
+   }
+}
+
+.contacts__info-wrapper
+{
+   display: flex;
+   flex-direction: column;
+   gap: toRem(32);
+   flex: 1 2 toRem(505);
+
+   @media (max-width: $tablet)
+   {
+      flex: 1 2 toRem(285);
+      gap: toRem(24);
+   }
+
+   @media (max-width: 640px)
+   {
+      gap: toRem(20);
+      order: 2;
+   }
+}
+
+.contacts__item-wrapper
+{
+   h3
+   {
+      margin-bottom: toRem(16);
+
+      @media (max-width: $tablet)
+      {
+         margin-bottom: toRem(12);
+      }
+
+      @media (max-width: $mobile)
+      {
+         margin-bottom: toRem(8);
+         line-height: toRem(32);
+      }
+   }
+}
+
+.contacts__item-details
+{
+   max-width: toRem(430);
+}
+
+.contacts__form-container
+{
+   flex: 2 1 toRem(715);
+
+   @media (max-width: $tablet)
+   {
+      flex: 2 1 toRem(407);
+   }
+}
+
+.contacts__form-body
+{
+   border: 1px solid $greyColor400;
+   border-radius: toRem(4);
+}
+
+.contacts__form-top-wrapper
+{
+   border-bottom: 1px solid $greyColor400;
+   background-color: $greyColor300;
+   padding: toRem(27) toRem(56);
+   display: flex;
+   gap: toRem(32);
+   align-items: center;
+
+   @media (max-width: $tablet)
+   {
+      padding: toRem(16) toRem(24);
+      gap: toRem(24);
+   }
+
+   @media (max-width: 640px)
+   {
+      padding: toRem(13) toRem(16);
+      gap: toRem(16);
+   }
+}
+
+.contacts__img-container
+{
+   max-width: toRem(96);
+
+   img
+   {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+   }
+}
+
+.contacts__call-action-wrapper
+{
+   h2
+   {
+      margin-bottom: toRem(8);
+   }
+}
+
+.contacts__form
+{
+   padding: toRem(32) toRem(56);
+
+   button
+   {
+      @include main-btn;
+      margin-bottom: toRem(16);
+      width: 100%;
+      max-width: toRem(247);
+
+      @media (max-width: $tablet)
+      {
+         max-width: none;
+         width: 100%;
+         height: toRem(44);
+      }
+
+      @media (max-width: $mobile)
+      {
+         margin-bottom: toRem(14);
+      }
+
+   }
+
+   @media (max-width: $tablet)
+   {
+      padding: toRem(24) toRem(24) toRem(21);
+   }
+
+   @media (max-width: 640px)
+   {
+      padding: toRem(24) toRem(16) toRem(16);
+   }
+}
+
+.contacts__form-wrapper
+{
+   display: flex;
+   flex-direction: column;
+   gap: toRem(16);
+   margin-bottom: toRem(24);
+
+   @media (max-width: $tablet)
+   {
+      margin-bottom: toRem(16);
+   }
+
+   input
+   {
+      width: 100%;
+      height: toRem(40);
+      border: 1px solid $greyColor400;
+      border-radius: toRem(4);
+      padding-inline: toRem(16);
+
+      @media (max-width: $tablet)
+      {
+         height: toRem(44);
+      }
+
+   }
+
+   input:focus
+   {
+      outline: none !important;
+      border: 1px solid rgb(0, 134, 201)
+   }
+
+   textarea
+   {
+      width: 100%;
+      height: toRem(180);
+      border: 1px solid $greyColor400;
+      border-radius: toRem(4);
+      padding: toRem(16);
+
+      @media (max-width: $tablet)
+      {
+         height: toRem(165);
+      }
+
+      @media (max-width: $mobile)
+      {
+         height: toRem(130);
+      }
+   }
+}
+
+.contacts__notice
+{
+   color: rgb(182, 182, 182);
+   font-size: toRem(14);
+   line-height: 20px;
+}
+
+.visually-hidden
+{
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+}
+
+.ymaps-2-1-79-map
+{
+   border-radius: toRem(4) !important;
+}
+
+.ymaps-2-1-79-gotoymaps__container,
+.ymaps-2-1-79-copyright__wrap
+{
+   display: none !important;
+}
+
+.contacts__map
+{
+   max-width: toRem(1240);
+   width: 100%;
+   height: toRem(512);
+   border-radius: toRem(4);
+
+   @media (max-width: $tablet)
+   {
+      height: toRem(350);
+   }
+
+   @media (max-width: $mobile)
+   {
+      height: toRem(235);
+   }
+}

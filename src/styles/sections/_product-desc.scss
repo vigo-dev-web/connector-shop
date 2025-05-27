@@ -219,7 +219,9 @@
    left: 0;
    transform: translate(50%) rotate(90deg);
    color: $blackColor;
-
+   -webkit-tap-highlight-color: transparent;
+   user-select: none;
+   outline: none;
    @media (max-width: $tablet)
    {
       display: none;
@@ -1140,7 +1142,8 @@
    }
 }
 
-.product-page__add-cart.product-desc {
+.product-page__add-cart.product-desc
+{
    box-sizing: border-box;
 }
 
@@ -1550,7 +1553,9 @@
    {
       background: none;
       padding: 0;
-      img {
+
+      img
+      {
          width: toRem(24);
       }
    }

@@ -850,8 +850,6 @@
 
 .product-page__page-size
 {
-   position: relative;
-
    @media (max-width: $mobile)
    {
       display: none;
@@ -900,6 +898,7 @@
 {
    position: absolute;
    right: 0;
+   transform: translateX(-35%);
    display: flex;
    flex-direction: column;
    align-items: center;

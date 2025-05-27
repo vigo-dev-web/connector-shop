@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/index.css">
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=082d4016-2253-4666-acca-0ffc03b9287b&lang=en_US"
+      type="text/javascript">
+      </script>
+   <script defer src="js/index.js"></script>
+   <title>Корзина</title>
+</head>
+
+<body class="body">
+   <div class="app__wrapper">
+      @@include('html/_header.htm')
+      @@include('html/_headerMobile.htm')
+      <main>
+         <section class="basket">
+            <div class="basket__container container">
+               <h2 class="basket__title">Корзина<span>2</span></h2>
+               <div class="basket__content-wrapper">
+                  <div class="basket__select-wrapper">
+                     <div class="basket__select-top">
+                        <div class="basket__top-wrapper">
+                           <div class="basket__select-all-wrapper">
+                              <input type="checkbox" name="select-all" id="select-all">
+                              <label for="select-all">Выбрать все</label>
+                           </div>
+                           <div class="basket__select-remove-wrapper">
+                              <span>&#10006;</span>
+                              <span>Удалить выбранные</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="basket__order-container">
+                     <div class="basket__order-card">
+                        <h3 class="basket__order-title">Детали заказа</h3>
+                        <div class="basket__order-position-wrapper">
+                           <div class="basket__order-item-wrapper">
+                              <span>20 товаров</span>..........................................<span>9 880 ₽</span>
+                           </div>
+                           <div class="basket__order-total-wrapper">
+                              <span>Итого</span>........................................<span>9 880 ₽</span>
+                           </div>
+                        </div>
+                        <button class="basket__order-btn">Перейти к оформлению</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="basket__content-wrapper_empty" style="display: none;"></div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm')
+   </div>
+   @@include('html/_scroll.htm')
+   @@include('html/_modal.htm')
+</body>
+
+</html>
