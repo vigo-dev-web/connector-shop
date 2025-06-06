@@ -1050,6 +1050,7 @@
 {
    position: relative;
    margin-bottom: toRem(80);
+   overflow-x: hidden;
 
    @media (max-width: $tablet)
    {

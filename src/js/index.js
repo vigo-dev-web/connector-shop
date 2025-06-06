@@ -7,6 +7,7 @@ import './libs/rating.js'
 import './libs/accordion.js'
 import './libs/modal.js'
 import './libs/header.js'
+import './libs/basket.js'
 // import './libs/scroll.js'
 import './libs/headerMobile.js'
 
