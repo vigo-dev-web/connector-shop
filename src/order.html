@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/index.css">
+   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=082d4016-2253-4666-acca-0ffc03b9287b&lang=en_US"
+      type="text/javascript">
+      </script>
+   <script defer src="js/index.js"></script>
+   <title>Оформление заказа</title>
+</head>
+
+<body class="body">
+   <div class="app__wrapper">
+      @@include('html/_header.htm')
+      @@include('html/_headerMobile.htm')
+      <main>
+         <section class="order">
+            <div class="order__container container">
+               <div class="breadcrumbs order">
+                  <ul class="breadcrumbs__list">
+                     <li><img src="./img/icons/arrow-right.svg" alt="стрелка"><a href="#">Вернуться в корзину</a></li>
+                  </ul>
+               </div>
+               <h2 class="order__title">Оформление заказа</h2>
+               <div class="order__wrapper">
+                  <div class="order__action-wrapper">
+                     <div class="order__action-card">
+                        <div class="order__card-container">
+                           <div class="order__card-top-wrapper">
+                              <h3>Контактные данные</h3>
+                              <p>Укажите данные или <button data-modal-link="account">войдите</button></p>
+                           </div>
+                           <form action="" class="order__form">
+                              <div class="order__form-container">
+                                 <div class="order__customer-body">
+                                    <div class="order__customer-wrapper">
+                                       <div class="order-radio-group customer">
+                                          <input type="radio" name="select-customer" id="left-thumb-customer" checked />
+                                          <label for="left-thumb-customer">Физическое лицо</label>
+                                          <input type="radio" name="select-customer" id="right-thumb-customer" />
+                                          <label for="right-thumb-customer">Юридическое лицо</label>
+                                          <div class="thumbler"></div>
+                                       </div>
+                                       <div class="order__customer-content-wrapper form-person__content">
+                                          <div class="order__customer-row-wrapper">
+                                             <div class="input-group">
+                                                <input type="text" name="person-name" id="person-name" placeholder=" ">
+                                                <label for="person-name">Ваше имя <span
+                                                      class="required">*</span></label>
+                                             </div>
+                                             <div class="input-group">
+                                                <input type="tel" name="person-phone" id="person-phone" placeholder=" "
+                                                   inputmode="numeric">
+                                                <label for="person-phone">Телефон <span
+                                                      class="required">*</span></label>
+                                             </div>
+                                          </div>
+                                          <div class="order__customer-row-wrapper">
+                                             <div class="input-group">
+                                                <input type="email" name="person-email" id="person-email"
+                                                   placeholder=" ">
+                                                <label for="person-name">Email <span class="required">*</span></label>
+                                             </div>
+                                             <div class="check-group">
+                                                <input type="checkbox" name="person-send" id="person-send" checked>
+                                                <label for="person-send">Отправить чек на почту</label>
+                                             </div>
+                                          </div>
+                                          <div class="input-group">
+                                             <textarea name="person-comment" id="person-comment"
+                                                placeholder=" "></textarea>
+                                             <label for="person-comment">Комментарий к заказу</label>
+                                          </div>
+                                       </div>
+                                       <div class="order__customer-content-wrapper form-business__content">
+                                          <div class="order__customer-row-wrapper">
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-name" id="bussiness-name"
+                                                   placeholder=" ">
+                                                <label for="bussiness-name">Название организации <span
+                                                      class="required">*</span></label>
+                                             </div>
+                                             <div class="input-group">
+                                                <input type="tel" name="bussiness-phone" id="bussiness-phone"
+                                                   placeholder=" " inputmode="numeric">
+                                                <label for="bussiness-phone">Телефон <span
+                                                      class="required">*</span></label>
+                                             </div>
+                                          </div>
+                                          <div class="order__customer-row-wrapper">
+                                             <div class="input-group">
+                                                <input type="email" name="bussiness-email" id="bussiness-email"
+                                                   placeholder=" ">
+                                                <label for="bussiness-name">Email <span
+                                                      class="required">*</span></label>
+                                             </div>
+                                             <div class="check-group">
+                                                <input type="checkbox" name="person-send" id="person-send" checked>
+                                                <label for="person-send">Отправить чек на почту</label>
+                                             </div>
+                                          </div>
+                                          <div class="order__customer-row-wrapper">
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-legal-address"
+                                                   id="bussiness-legal-address" placeholder=" ">
+                                                <label for="bussiness-legal-address">Юридический адрес <span
+                                                      class="required">*</span></label>
+                                             </div>
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-address" id="bussiness-address"
+                                                   placeholder=" ">
+                                                <label for="bussiness-address">Фактический адрес <span
+                                                      class="required">*</span></label>
+                                             </div>
+                                          </div>
+                                          <div class="order__customer-row-wrapper">
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-inn" id="bussiness-inn"
+                                                   placeholder=" ">
+                                                <label for="bussiness-inn">ИНН <span class="required">*</span></label>
+                                             </div>
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-address" id="bussiness-address"
+                                                   placeholder=" ">
+                                                <label for="bussiness-address">КПП</label>
+                                             </div>
+                                          </div>
+                                          <div class="order__customer-row-wrapper">
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-bank" id="bussiness-bank"
+                                                   placeholder=" ">
+                                                <label for="bussiness-bank">Название банка (или БИК) </label>
+                                             </div>
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-bank-id" id="bussiness-bank-id"
+                                                   placeholder=" ">
+                                                <label for="bussiness-bank-id">БИК банка</label>
+                                             </div>
+                                          </div>
+                                          <div class="order__customer-row-wrapper">
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-correspondent"
+                                                   id="bussiness-correspondent" placeholder=" ">
+                                                <label for="bussiness-correspondent">Корреспондентский счёт банка
+                                                </label>
+                                             </div>
+                                             <div class="input-group">
+                                                <input type="text" name="bussiness-current" id="bussiness-current"
+                                                   placeholder=" ">
+                                                <label for="bussiness-current">Расчётный счёт банка</label>
+                                             </div>
+                                          </div>
+                                          <div class="input-group">
+                                             <textarea name="person-comment" id="business-comment"
+                                                placeholder=" "></textarea>
+                                             <label for="business-comment">Комментарий к заказу</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="order__delivery-card">
+                        <div class="oreder__delivery-card-container">
+                           <div class="oreder__delivery-card-top-wrapper">
+                              <h3>Способ получения</h3>
+                              <p>Ваш город
+                                 <span>Ростов-на-Дону</span>
+                              </p>
+                           </div>
+                           <div class="order-radio-group delivery">
+                              <input type="radio" name="delivery" id="left-thumb-delivery" checked />
+                              <label for="left-thumb-delivery">Доставка</label>
+                              <input type="radio" name="delivery" id="right-thumb-delivery" />
+                              <label for="right-thumb-delivery">Самовывоз</label>
+                              <div class="thumbler"></div>
+                           </div>
+                           <div class="order__delivery-content delivery-content">
+                              <p>Выберите компанию</p>
+                              <div class="delivery-company__container">
+                                 <div class="delivery-company__info-wrapper">
+                                    <p>Способ доставки</p>
+                                    <p>Стоимость</p>
+                                    <p>Срок</p>
+                                 </div>
+                                 <ul class="delivery-company__list-wrapper">
+                                    <li class="delivery-company__item">
+                                       <div class="delivery-company__item-wrapper">
+                                          <div class="delivery-company__left-wrapper">
+                                             <input type="radio" name="select-company" checked />
+                                             <img src="@img/icons/logo_delivery-1.png" alt="доставка">
+                                             <div class="delivery-company__info">
+                                                <p>CDEK курьерская доставка</p>
+                                                <p>Посылка склад-склад</p>
+                                             </div>
+                                          </div>
+                                          <div class="delivery-company__price-wrapper"><span>Стоимость</span><span> 1
+                                                087 ₽</span></div>
+                                          <div class="delivery-company__estimate-wrapper"><span>Срок</span><span>5-7
+                                                дней</span></div>
+                                       </div>
+                                    </li>
+                                    <li class="delivery-company__item">
+                                       <div class="delivery-company__item-wrapper">
+                                          <div class="delivery-company__left-wrapper">
+                                             <input type="radio" name="select-company" />
+                                             <img src="@img/icons/logo_delivery-2.png" alt="доставка">
+                                             <div class="delivery-company__info">
+                                                <p>CDEK курьерская доставка</p>
+                                                <p>Посылка склад-склад</p>
+                                             </div>
+                                          </div>
+                                          <div class="delivery-company__price-wrapper"><span>Стоимость</span><span> 1
+                                                087 ₽</span></div>
+                                          <div class="delivery-company__estimate-wrapper"><span>Срок</span><span>5-7
+                                                дней</span></div>
+                                       </div>
+                                    </li>
+                                    <li class="delivery-company__item">
+                                       <div class="delivery-company__item-wrapper">
+                                          <div class="delivery-company__left-wrapper">
+                                             <input type="radio" name="select-company" />
+                                             <img src="@img/icons/logo_delivery-1.png" alt="доставка">
+                                             <div class="delivery-company__info">
+                                                <p>CDEK курьерская доставка</p>
+                                                <p>Посылка склад-склад</p>
+                                             </div>
+                                          </div>
+                                          <div class="delivery-company__price-wrapper"><span>Стоимость</span><span> 1
+                                                087 ₽</span></div>
+                                          <div class="delivery-company__estimate-wrapper"><span>Срок</span><span>5-7
+                                                дней</span></div>
+                                       </div>
+                                    </li>
+                                    <li class="delivery-company__item">
+                                       <div class="delivery-company__item-wrapper">
+                                          <div class="delivery-company__left-wrapper">
+                                             <input type="radio" name="select-company" />
+                                             <img src="@img/icons/logo_delivery-2.png" alt="доставка">
+                                             <div class="delivery-company__info">
+                                                <p>CDEK курьерская доставка</p>
+                                                <p>Посылка склад-склад</p>
+                                             </div>
+                                          </div>
+                                          <div class="delivery-company__price-wrapper"><span>Стоимость</span><span> 1
+                                                087 ₽</span></div>
+                                          <div class="delivery-company__estimate-wrapper"><span>Срок</span><span>5-7
+                                                дней</span></div>
+                                       </div>
+                                    </li>
+                                    <li class="delivery-company__item">
+                                       <div class="delivery-company__item-wrapper">
+                                          <div class="delivery-company__left-wrapper">
+                                             <input type="radio" name="select-company" />
+                                             <img src="@img/icons/logo_delivery-1.png" alt="доставка">
+                                             <div class="delivery-company__info">
+                                                <p>CDEK курьерская доставка</p>
+                                                <p>Посылка склад-склад</p>
+                                             </div>
+                                          </div>
+                                          <div class="delivery-company__price-wrapper"><span>Стоимость</span><span> 1
+                                                087 ₽</span></div>
+                                          <div class="delivery-company__estimate-wrapper"><span>Срок</span><span>5-7
+                                                дней</span></div>
+                                       </div>
+                                    </li>
+
+                                    <li class="delivery-company__item">
+                                       <div class="delivery-company__item-wrapper">
+                                          <div class="delivery-company__left-wrapper">
+                                             <input type="radio" name="select-company" />
+                                             <img src="@img/icons/logo_delivery-hidden.png" alt="доставка">
+                                             <div class="delivery-company__info">
+                                                <p>CDEK курьерская доставка</p>
+                                                <p>Посылка склад-склад</p>
+                                             </div>
+                                          </div>
+                                          <div class="delivery-company__price-wrapper"><span>Стоимость</span><span> 1
+                                                087 ₽</span></div>
+                                          <div class="delivery-company__estimate-wrapper"><span>Срок</span><span>5-7
+                                                дней</span></div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="order__delivery-content pickup-content">
+                              <div class="pcikup__wrapper">
+                                 <div class="pickup__place">
+                                    <p>ООО “КевТек”</p>
+                                    <div class="pickup__address">
+                                       <img src="@img/icons/location.svg" alt="адрес">
+                                       <p>г. Всеволожск ул. Аэропортовская, 14</p>
+                                    </div>
+                                 </div>
+                                 <div class="pickup__map-container">
+                                    <div id="map-order" class="contacts__map"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="order__point-card">
+                        <div class="order__point-card-container">
+                           <div class="order__point-top-wrapper">
+                              <h3>Адреса пунктов выдачи</h3>
+                              <p>Ваш город <span>Ростов-на-Дону</span>
+                              </p>
+                           </div>
+                           <div class="order__point-content-wrapper">
+                              <div class="order__point-container">
+                                 <div class="order__point-wrapper">
+                                    <div class="point__accordion">
+                                       <p data-point-id="1" class="point__accordion-address">
+                                          Ул. Темерницкая, 83, оф. 11
+                                       </p>
+                                       <div data-point-item="1" class="point__accordion-content">
+                                          <div class="point__accordion-wrapper">
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/phone.svg" alt="телефон">
+                                                <span>+7 (863) 277 50 68</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/clock.svg" alt="время работы">
+                                                <span>Пн-Пт 10:00-21:00, Сб-Вс 10:00-20:00</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/rub.svg" alt="стоимость">
+                                                <span>Стоимость - 1 087 ₽</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/calendar.svg" alt="время доставки">
+                                                <span>Можно забрать с 20 декабря, пятница</span>
+                                             </div>
+                                          </div>
+                                          <button class="point__accordion-btn">Выбрать</button>
+                                       </div>
+                                    </div>
+                                    <div class="point__accordion">
+                                       <p data-point-id="2" class="point__accordion-address">
+                                          Ул. Ерёменко, 115А, 2 подъезд
+                                       </p>
+                                       <div data-point-item="2" class="point__accordion-content">
+                                          <div class="point__accordion-wrapper">
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/phone.svg" alt="телефон">
+                                                <span>+7 (863) 277 50 68</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/clock.svg" alt="время работы">
+                                                <span>Пн-Пт 10:00-21:00, Сб-Вс 10:00-20:00</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/rub.svg" alt="стоимость">
+                                                <span>Стоимость - 1 087 ₽</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/calendar.svg" alt="время доставки">
+                                                <span>Можно забрать с 20 декабря, пятница</span>
+                                             </div>
+                                          </div>
+                                          <button class="point__accordion-btn">Выбрать</button>
+                                       </div>
+                                    </div>
+                                    <div class="point__accordion">
+                                       <p data-point-id="3" class="point__accordion-address">
+                                          Ул. Елецкая, 76
+                                       </p>
+                                       <div data-point-item="3" class="point__accordion-content">
+                                          <div class="point__accordion-wrapper">
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/phone.svg" alt="телефон">
+                                                <span>+7 (863) 277 50 68</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/clock.svg" alt="время работы">
+                                                <span>Пн-Пт 10:00-21:00, Сб-Вс 10:00-20:00</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/rub.svg" alt="стоимость">
+                                                <span>Стоимость - 1 087 ₽</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/calendar.svg" alt="время доставки">
+                                                <span>Можно забрать с 20 декабря, пятница</span>
+                                             </div>
+                                          </div>
+                                          <button class="point__accordion-btn">Выбрать</button>
+                                       </div>
+                                    </div>
+                                    <div class="point__accordion">
+                                       <p data-point-id="4" class="point__accordion-address">
+                                          Ул. Октябрьской революции, 59
+                                       </p>
+                                       <div data-point-item="4" class="point__accordion-content">
+                                          <div class="point__accordion-wrapper">
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/phone.svg" alt="телефон">
+                                                <span>+7 (863) 277 50 68</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/clock.svg" alt="время работы">
+                                                <span>Пн-Пт 10:00-21:00, Сб-Вс 10:00-20:00</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/rub.svg" alt="стоимость">
+                                                <span>Стоимость - 1 087 ₽</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/calendar.svg" alt="время доставки">
+                                                <span>Можно забрать с 20 декабря, пятница</span>
+                                             </div>
+                                          </div>
+                                          <button class="point__accordion-btn">Выбрать</button>
+                                       </div>
+
+                                    </div>
+                                    <div class="point__accordion">
+                                       <p data-point-id="5" class="point__accordion-address">
+                                          Пер. Кустанайский, 36А
+                                       </p>
+                                       <div data-point-item="5" class="point__accordion-content">
+                                          <div class="point__accordion-wrapper">
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/phone.svg" alt="телефон">
+                                                <span>+7 (863) 277 50 68</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/clock.svg" alt="время работы">
+                                                <span>Пн-Пт 10:00-21:00, Сб-Вс 10:00-20:00</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/rub.svg" alt="стоимость">
+                                                <span>Стоимость - 1 087 ₽</span>
+                                             </div>
+                                             <div class="point__accordion-wrapper-content">
+                                                <img src="@img/icons/calendar.svg" alt="время доставки">
+                                                <span>Можно забрать с 20 декабря, пятница</span>
+                                             </div>
+                                          </div>
+                                          <button class="point__accordion-btn">Выбрать</button>
+                                       </div>
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="order__point-widget-container">
+                                 <div class="order__point-widget-wrapper">
+                                    <input type="text" id="delivery-addrss" name="delivery-addrss"
+                                       placeholder="Начните вводить адрес">
+                                    <div id="cdek-map">
+                                       <img src="@img/content/sdek-map.jpg" alt="">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="order__payment-card">
+                        <div class="order__payment-card-container">
+                           <h3>Способ оплаты</h3>
+                           <div class="order__payment-wrapper">
+                              <div class="order__payment-row-wrapper">
+                                 <div class="payment__item">
+                                    <div class="payment__item-wrapper">
+                                       <div class="payment__left-wrapper">
+                                          <input type="radio" name="select-payment" checked />
+                                          <label for="select-payment">Банковской картой</label>
+                                       </div>
+                                       <div class="payment__card-wrapper">
+                                          <img src="@img/icons/visa.svg" alt="виза">
+                                          <img src="@img/icons/master_card.svg" alt="мастеркард">
+                                          <img src="@img/icons/mir.svg" alt="мир">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="payment__item">
+                                    <div class="payment__item-wrapper">
+                                       <div class="payment__left-wrapper">
+                                          <input type="radio" name="select-payment" />
+                                          <label for="select-payment">По QR-коду</label>
+                                       </div>
+                                       <img src="@img/icons/qr.svg" alt="qr-код">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="order__payment-row-wrapper">
+                                 <div class="payment__item">
+                                    <div class="payment__item-wrapper">
+                                       <div class="payment__left-wrapper">
+                                          <input type="radio" name="select-payment" />
+                                          <label for="select-payment">Система быстрых платежей</label>
+                                       </div>
+                                       <img src="@img/icons/sbp.svg" alt="сбп">
+                                    </div>
+                                 </div>
+                                 <div class="payment__item">
+                                    <div class="payment__item-wrapper">
+                                       <div class="payment__left-wrapper">
+                                          <input type="radio" name="select-payment" />
+                                          <label for="select-payment">По счёту</label>
+                                       </div>
+                                       <img src="@img/icons/note.svg" alt="счет">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="order__payment-row-wrapper">
+                                 <div class="payment__item">
+                                    <div class="payment__item-wrapper">
+                                       <div class="payment__left-wrapper">
+                                          <input type="radio" name="select-payment" />
+                                          <label for="select-payment">Наличными при получении</label>
+                                       </div>
+                                       <img src="@img/icons/wallet.svg" alt="наличные">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order__details">
+                     <div class="order__details-card">
+                        <div class="order__details-card-container">
+                           <h3>Детали заказа</h3>
+                           <div class="order__details-card-wrapper">
+                              <div class="order__details-wrapper">
+                                 <span>20 товаров</span> <span>...</span> <span>9 880 ₽</span>
+                              </div>
+                              <div class="order__details-wrapper delivery">
+                                 <span>Доставка</span> <span>...</span> <span>1 087 ₽ </span>
+                              </div>
+                              <div class="order__details-wrapper payment">
+                                 <span>Способ оплаты</span> <span>...</span> <span>Банковской картой</span>
+                              </div>
+                              <div class="order__details-wrapper overall">
+                                 <span>Итого</span> <span>...</span> <span>10 967 ₽</span>
+                              </div>
+                           </div>
+                           <button class="order__details-btn">
+                              Оплатить
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="order__check-wrapper">
+                  <div class="order__check-item-wrapper">
+                     <input type="checkbox" id="save-data" name="save-data" checked>
+                     <label>Сохранить данные о компании для следующих заказов</label>
+                  </div>
+                  <div class="order__check-item-wrapper">
+                     <input type="checkbox" id="save-phone" name="save-phone" checked>
+                     <label>Мне нужно согласование заказа по телефону</label>
+                  </div>
+                  <div class="order__check-item-wrapper">
+                     <input type="checkbox" id="save-order" name="save-order">
+                     <label><span>Мне не нужно согласование заказа. </span>Я проверил(а) детали заказа и понимаю, что
+                        в случае неверного выбора товара или указания некорректных личных данных, стоимость
+                        доставки (если такая имеется)не возвращается</label>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm')
+   </div>
+   @@include('html/_scroll.htm')
+   @@include('html/_modal.htm')
+</body>
+
+</html>

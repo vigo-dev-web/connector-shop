@@ -145,8 +145,16 @@ $fifthTitleSize: toRem(16);
 }
 
 @mixin adaptiveValue($property, $S-max, $S-min ) {
-  $k: calc(($S-max - $S-min)/(768 - 360));
-  $b: $S-min - $k * 360;
+  $k: calc(($S-max - $S-min)/(1920 - 991));
+  $b: $S-min - $k * 991;
+
+  $b: $b + px;
+  #{$property}: calc(#{$k} * 100vw + #{$b})
+}
+
+@mixin adaptiveTabletValue($property, $S-max, $S-min ) {
+  $k: calc(($S-max - $S-min)/(990 - 576));
+  $b: $S-min - $k * 576;
 
   $b: $b + px;
   #{$property}: calc(#{$k} * 100vw + #{$b})

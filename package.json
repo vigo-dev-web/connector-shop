@@ -4,8 +4,8 @@
   "description": "gulp assembling project es6",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp",
-    "dev": "gulp",
+    "start": "gulp --no-experimental-require-module",
+    "dev": "gulp --no-experimental-require-module",
     "clean": "gulp cleanDist",
     "build": "gulp build --build",
     "test": "echo \"Error: no test specified\" && exit 1"
