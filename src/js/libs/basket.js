@@ -19,44 +19,106 @@ removeBtnArr.forEach((btn) => {
 });
 
 function generateDots() {
-	// Получаем все контейнеры, которые нужно обработать
 	const wrappers = document.querySelectorAll('.basket__order-item-wrapper, .basket__order-total-wrapper')
 
 	wrappers.forEach((wrapper) => {
-		// Находим все span элементы внутри текущего контейнера
 		const spans = wrapper.querySelectorAll('span')
 
-		// Пропускаем если нет нужного количества span элементов
 		if (spans.length < 3) return
 
 		const leftSpan = spans[0]
 		const dotsSpan = spans[1]
 		const rightSpan = spans[2]
 
-		// Вычисляем доступную ширину
 		const wrapperWidth = wrapper.clientWidth
 		const leftWidth = leftSpan.offsetWidth
 		const rightWidth = rightSpan.offsetWidth
 
-		// Вычисляем доступное пространство для точек
 		const availableWidth = wrapperWidth - leftWidth - rightWidth
-
-		// Минимальный отступ (можно настроить)
 		const minGap = 5
 
 		if (availableWidth > minGap) {
-			// Рассчитываем количество точек, которые поместятся
 			const dotWidth = 5 // Примерная ширина одной точки
 			const dotsCount = Math.floor(availableWidth / dotWidth)
-
-			// Заполняем span точками
 			dotsSpan.textContent = '.'.repeat(dotsCount)
 		} else {
-			// Если места совсем мало, оставляем минимальное количество точек
 			dotsSpan.textContent = '...'
 		}
 	})
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Обработчик для всех кнопок счетчика
+  document.querySelectorAll('[data-counter]').forEach(button => {
+    button.addEventListener('click', function() {
+      const action = this.getAttribute('data-counter');		
+      const input = this.closest('.basket__item-counter-wrapper').querySelector('[data-counter="input"]');
+      handleCounterAction(input, action);
+    });
+  });
+
+  // Обработчик для ручного ввода в поле
+  document.querySelectorAll('[data-counter="input"]').forEach(input => {
+    input.addEventListener('input', function() {
+      validateInput(this);
+    });
+
+    input.addEventListener('blur', function() {
+      if (this.value === '' || parseInt(this.value) < 1) {
+        this.value = '1';
+      }
+    });
+  });
+});
+
+function handleCounterAction(input, action) {
+  let value = parseInt(input.value) || 1;
+
+  if (action === 'plus') {
+    if (value < 9999) {
+      value++;
+    }
+  } else if (action === 'minus') {
+    if (value > 1) {
+      value--;
+    }
+  }
+
+  input.value = value;
+}
+
+function validateInput(input) {
+  let value = input.value.replace(/[^0-9]/g, '');
+  
+  if (value === '' || parseInt(value) === 0) {
+    input.value = value;
+    return;
+  }  
+  let numValue = parseInt(value);
+  if (numValue > 9999) {
+    numValue = 9999;
+  }
+  
+  input.value = numValue;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const selectAllCheckbox = document.getElementById('select-all');
+  const itemCheckboxes = document.querySelectorAll('input[name="select-item"]');
+  
+  selectAllCheckbox.addEventListener('change', function() {
+    itemCheckboxes.forEach(checkbox => {
+      checkbox.checked = selectAllCheckbox.checked;
+    });
+  });
+  
+  itemCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      const allChecked = Array.from(itemCheckboxes).every(cb => cb.checked);
+      selectAllCheckbox.checked = allChecked;
+    });
+  });
+});
 
 window.addEventListener('load', generateDots)
 window.addEventListener('resize', generateDots)

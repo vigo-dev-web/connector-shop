@@ -30,7 +30,7 @@
   }
 }
 
-.breadcrumbs__list
+.breadcrumbs__list.order
 {
   img
   {
@@ -468,6 +468,11 @@
   }
 }
 
+.pickup__place
+{
+  // flex: 2 1 50%; 
+}
+
 .pickup__place>p
 {
   font-size: toRem(24);
@@ -502,11 +507,16 @@
   }
 }
 
+.pickup__map-container
+{
+  // flex: 0 3 50%;
+}
+
 .contacts__map
 {
   border-radius: toRem(8);
-  width: 23vw;
   height: toRem(186);
+  width: 22vw;
 
   @media (max-width: $tablet)
   {
@@ -843,10 +853,6 @@
   }
 }
 
-.order__point-container._open
-{
-  padding-right: toRem(8);
-}
 
 .order__point-wrapper
 {
@@ -1360,4 +1366,132 @@
 {
   @include main-btn;
   width: 100%;
+}
+
+.order__success {
+  margin-top: toRem(170);
+  @media (max-width: $tablet) {
+    margin-top: toRem(50);  
+  }
+}
+
+.order__success-img
+{
+  width: 100%;
+  max-width: toRem(100);
+  margin-bottom: toRem(48);
+  margin-inline: auto;
+  @media (max-width: $tablet) {
+    margin-bottom: toRem(24);  
+  }
+
+  & img
+  {
+    object-fit: contain;
+    width: 100%;
+  }
+
+  @media (max-width: $tablet)
+  {
+    max-width: toRem(77);
+  }
+  @media (max-width: $mobile)
+  {
+    max-width: toRem(58);
+  }
+}
+
+.order__success-content
+{
+  margin-bottom: toRem(80);
+
+  @media (max-width: $tablet)
+  {
+    margin-bottom: toRem(56);
+  }
+
+  @media (max-width: $mobile)
+  {
+    margin-bottom: toRem(36);
+  }
+
+  h2
+  {
+    text-align: center;
+    color: $blueColor;
+    margin-bottom: toRem(16);
+    @media (max-width: $mobile) {
+      font-size: toRem(20);
+      line-height: toRem(26);
+    }
+  }
+  
+  & h3
+  {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: toRem(36);
+    @media (max-width: $tablet)
+    {
+      margin-bottom: toRem(24);
+      font-size: toRem(18);
+      line-height: toRem(26);
+    }
+
+    @media (max-width: $mobile)
+    {
+      font-size: toRem(16);
+      line-height: toRem(24);
+      margin-bottom: toRem(16);
+    }
+  }
+}
+
+.order__success-btn
+{
+  display: flex;
+  gap: toRem(20);
+  justify-content: center;
+
+  @media (max-width: $mobile)
+  {
+    gap: toRem(8);
+  }
+
+  & a
+  {
+    @include stroke-btn;
+    padding: toRem(7.5);
+    line-height: toRem(24);
+    width: toRem(190);
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+
+    @media (max-width: $tablet)
+    {
+      font-weight: 500;
+      width: toRem(224);
+      padding-block: toRem(9);
+    }
+
+    @media (max-width: $mobile)
+    {
+      width: toRem(160);
+      line-height: toRem(30);
+      padding-block: toRem(6);
+    }
+    ._desktop {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    ._mobile {
+      display: none;
+      @media (max-width: $mobile) {
+        display: inline;
+      }
+    }
+  }
+
 }

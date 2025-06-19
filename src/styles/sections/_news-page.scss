@@ -1,3 +1,7 @@
+.news-page {
+   overflow-x: hidden;
+}
+
 .news-page__content
 {
    margin-bottom: toRem(80);
@@ -96,7 +100,6 @@
 .news-page__container
 {
    margin-bottom: toRem(80);
-   overflow-x: hidden;
    @media (max-width: $tablet)
    {
       margin-bottom: toRem(56);

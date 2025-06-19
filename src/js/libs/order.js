@@ -1,9 +1,6 @@
 const deliveryItems = document.querySelectorAll('.delivery-company__item')
 const paymentItems = document.querySelectorAll('.payment__item')
-const phoneInputArr = document.querySelectorAll('#order-phone')
-const personLabel = document.querySelector('[for="left-thumb-customer"]')
-
-const bussinessLabel = document.querySelector('[for="right-thumb-customer"]')
+const phoneInputArr = document.querySelectorAll('#bussiness-phone, #person-phone');
 
 phoneInputArr.forEach((input) => {
 	input.addEventListener('input', function () {
@@ -34,13 +31,21 @@ paymentItems.forEach((item) => {
 })
 
 function updateLabels() {
-	if (window.innerWidth < 576) {
-		personLabel.textContent = 'Физ. лицо'
-		bussinessLabel.textContent = 'Юр. лицо'
-	} else {
-		personLabel.textContent = 'Физическое лицо'
-		bussinessLabel.textContent = 'Юридическое лицо'
-	}
+const personLabel = document.querySelector('[for="left-thumb-customer"]')
+const bussinessLabel = document.querySelector('[for="right-thumb-customer"]')
+  
+  if (!personLabel || !bussinessLabel) {
+    console.error('Не удалось найти элементы для обновления текста');
+    return;
+  }
+
+  if (window.innerWidth < 576) {
+    personLabel.textContent = 'Физ. лицо';
+    bussinessLabel.textContent = 'Юр. лицо';
+  } else {
+    personLabel.textContent = 'Физическое лицо';
+    bussinessLabel.textContent = 'Юридическое лицо';
+  }
 }
 
 function generateDots() {

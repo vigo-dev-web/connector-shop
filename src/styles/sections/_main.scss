@@ -792,7 +792,9 @@ h2.benefits__title
          display: flex;
          align-items: center;
          justify-content: center;
-         @include adaptiveValue(width, 163, 90)
+         box-sizing: border-box;
+         @include adaptiveTabletValue(width, 163, 90)
+         
       }
 
       @media (max-width: $mobile)
